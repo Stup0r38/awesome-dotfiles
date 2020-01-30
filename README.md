@@ -92,7 +92,7 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 
 <a name="applications"></a>
 ## My Preferred Applications ##
-+ **Display Manager - SDDM (with sddm-sugar-dark theme)**: Beautiful display manager. Matches the window manager theme very well and looks amazing
++ **Display Manager - SDDM (with sddm-sugar-candy theme)**: Beautiful display manager. Matches the window manager theme very well and looks amazing
 + **Text Editor - nvim**: I'm an alpha chad
 + **File Manager - Nautilus**: Lightweight file browser, few dependencies, and can be configured to work with a preferred terminal. Also has extensions for easy right click extraction / compression of archive files (ie zip / rar etc)
 + **Web Browser - Firefox**: Super configurable and isn't made by Google
@@ -191,3 +191,6 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + workspace switcher with thumbnails
 + change volume / brightness to extend out from side similar to other widgets in theme
 + flatten left panel + darken top panel on maximized window or maximized layout
++ switch to [picom-tryone-git](https://github.com/tryone144/compton/tree/feature/dual_kawase)
++ fix transparent round corners blurring
++ lock screen
