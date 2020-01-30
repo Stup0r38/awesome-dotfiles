@@ -189,4 +189,5 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + find way to implement struts for top and left panel that only affect non rofi windows
 + time/weather widget
 + workspace switcher with thumbnails
-+ chaneg volume / brightness to extend out from side similar to other widgets in theme
++ change volume / brightness to extend out from side similar to other widgets in theme
++ flatten left panel + darken top panel on maximized window or maximized layout
