@@ -186,3 +186,4 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + iconography, top panel
 + dock for left panel
 + fix colors + blur
++ find way to implement struts for top and left panel that only affect non rofi windows

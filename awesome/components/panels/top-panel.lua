@@ -60,7 +60,7 @@ local month_calendar = awful.widget.calendar_popup.month({
 	spacing = 10,
 	font = beautiful.title_font,
 	long_weekdays = true,
-	margin = 0, -- 10
+	margin = 0,
 	style_month = { border_width = 0, padding = 12, shape = cal_shape, padding = 25},
 	style_header = { border_width = 0, bg_color = '#00000000'},
 	style_weekday = { border_width = 0, bg_color = '#00000000'},
@@ -126,11 +126,6 @@ local TopPanel = function(s)
     bg = "#00000000",
     fg = beautiful.fg_normal
   }
-
-  -- define space to push windows away (equal to bar length so windows dont cover panel)
-  panel:struts({
-    top = dpi(26)
-  })
 
   panel:setup {
     expand = "none",
