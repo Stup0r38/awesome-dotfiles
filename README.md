@@ -2,6 +2,8 @@
 [![HitCount](http://hits.dwyl.io/willpower3309/awesome-dotfiles.svg)](http://hits.dwyl.io/willpower3309/awesome-dotfiles)
 
 ![](/screenshot.png)
+![](/screenshot2.jpg)
+![](/screenshot3.jpg)
 
 ## Contents ##
 1. [Details](#details)
@@ -20,7 +22,7 @@
 + **Shell**: ZSH
 + **WM**: awesome
 + **Theme**: Qogir-dark
-+ **Icons**: McMojave-Circle-Blue-Dark
++ **Icons**: Tela
 + **Terminal**: kitty
 
 <a name="features"></a>
@@ -45,7 +47,7 @@ I have made my best effort to reduce the number of dependencies by using the awe
 |:----------:|:-------------:|
 |`awesome-git`|Window manager - **must use git version.** If you are using an Arch based distro you can install it off of the AUR. Otherwise [refer to the installation instructions](https://github.com/awesomeWM/awesome/)|
 |`feh`|Fast image viewer used as wallpaper setting utility|
-|`picom`|Window compositor, eliminates screen tearing and allows for cool fade effects|
+|`compton-tryone`|Window compositor, eliminates screen tearing and allows for cool fade & blur effects|
 |`rofi-git`|Application launcher - **must use git version**|
 |`imagemagick`|Used in config to generate blurred wallpaper|
 
@@ -181,3 +183,6 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 
 ## TO DO ##
 + panels on top, rofi placement, rofi with round corners
++ iconography, top panel
++ dock for left panel
++ fix colors + blur
