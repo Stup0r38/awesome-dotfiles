@@ -16,8 +16,6 @@ local dpi = require('beautiful').xresources.apply_dpi
 local awful = require('awful')
 local gears = require('gears')
 
-local TagList = require('widgets.tag-list')
-
 
 -- ===================================================================
 -- Bar Creation
@@ -28,8 +26,10 @@ local LeftPanel = function(s)
   local left_panel = awful.wibar({
     position = "left",
     screen = s,
+    bg = "#000000",
+    fg = beautiful.fg_normal,
     width = dpi(55),
-    height = s.geometry.height  * 7/10,
+    height = s.geometry.height,
     shape = function(cr, width, height)
       gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 12)
     end
@@ -38,11 +38,11 @@ local LeftPanel = function(s)
   left_panel:setup {
     expand = "none",
     layout = wibox.layout.align.vertical,
-    nil,
+    require("widgets.layout-box"),
     {
       layout = wibox.layout.fixed.vertical,
-      -- add taglist widget
-      TagList(s),
+      -- add dock widget
+      -- require("widgets.dock"),
       -- add folders widget
       require("widgets.xdg-folders"),
     },
@@ -50,20 +50,7 @@ local LeftPanel = function(s)
   }
 
   function maximizeLeftPanel(bool)
-    if bool then
-      left_panel.height = s.geometry.height - dpi(26)
-      left_panel.y = dpi(26)
-      left_panel.shape = function(cr, width, height)
-        gears.shape.rectangle(cr, width, height)
-      end
-    else
-      left_panel.height = s.geometry.height  * 7/10
-      left_panel.shape = function(cr, width, height)
-        gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 12)
-      end
-    end
   end
-  return left_panel
 end
 
 return LeftPanel

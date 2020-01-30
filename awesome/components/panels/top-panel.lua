@@ -18,7 +18,6 @@ local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('icons')
 
 -- import widgets
-local TaskList = require('widgets.task-list')
 local mat_icon_button = require('widgets.icon-button')
 local mat_icon = require('widgets.icon')
 
@@ -85,31 +84,28 @@ end)
 -- Execute only if system tray widget is not loaded
 awesome.connect_signal("toggle_tray", function()
   if not require('widgets.systemtray') then
-    if awful.screen.focused().systray.visible ~= true then
-      awful.screen.focused().systray.visible = true
-    else
-      awful.screen.focused().systray.visible = false
+    if awful.screen.focused().systray.v then
+    -- open tag application button
+    local add_button = mat_icon_button(mat_icon(icons.open, dpi(10)))
+    add_button:buttons(
+      gears.table.join(
+        awful.button({}, 1, nil,
+          function()
+            awful.spawn(
+              awful.screen.focused().selected_tag.defaultApp,
+              {
+                tag = mouse.screen.selected_tag,
+                placement = awful.placement.bottom_right
+              }
+            )
+          end
+        )
+      )
+    )
+    sible = false
     end
   end
 end)
-
--- open tag application button
-local add_button = mat_icon_button(mat_icon(icons.open, dpi(10)))
-add_button:buttons(
-  gears.table.join(
-    awful.button({}, 1, nil,
-      function()
-        awful.spawn(
-          awful.screen.focused().selected_tag.defaultApp,
-          {
-            tag = mouse.screen.selected_tag,
-            placement = awful.placement.bottom_right
-          }
-        )
-      end
-    )
-  )
-)
 
 
 -- ===================================================================
@@ -120,13 +116,14 @@ add_button:buttons(
 local TopPanel = function(s)
   local panel = wibox {
     ontop = true,
+    type = "dock",
     screen = s,
     height = dpi(26),
     width = s.geometry.width,
     x = s.geometry.x,
     y = s.geometry.y,
     stretch = false,
-    bg = beautiful.bg_normal,
+    bg = "#00000000",
     fg = beautiful.fg_normal
   }
 
@@ -138,11 +135,7 @@ local TopPanel = function(s)
   panel:setup {
     expand = "none",
     layout = wibox.layout.align.horizontal,
-    {
-      layout = wibox.layout.fixed.horizontal,
-      TaskList(s),
-      add_button
-    },
+    nil,
 	  clock_widget,
     {
       layout = wibox.layout.fixed.horizontal,
@@ -152,7 +145,6 @@ local TopPanel = function(s)
       require('widgets.bluetooth'),
       require('widgets.wifi'),
       require('widgets.battery'),
-      require("widgets.layout-box")
     }
   }
 

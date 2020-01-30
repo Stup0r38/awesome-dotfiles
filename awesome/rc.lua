@@ -20,6 +20,7 @@ require("awful.autofocus")
 -- Import theme
 local beautiful = require("beautiful")
 beautiful.init(config_dir .. "/theme.lua")
+gears.wallpaper.maximized(config_dir .. "/wallpaper.jpg")
 
 -- Import rules
 awful.rules.rules = require("rules")
@@ -33,10 +34,9 @@ require("components.panels")
 require("components.exit-screen")
 require("components.brightness-osd")
 require("components.volume-osd")
-require("components.wallpaper")
--- Import Tag Settings
-require("tags")
+--require("components.round-client")
 
+require("tags")
 
 -- ===================================================================
 -- Signals

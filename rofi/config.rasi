@@ -1,13 +1,13 @@
 configuration {
     show-icons:                     true;
-    icon-theme:                     "McMojave-circle-dark";
+    icon-theme:                     "Tela";
     font:                           "SF Pro Display 14";
 }
 
 * {
     background-color:               transparent;
-    background:                     #1F2430;
-    background-alt:                 #E5E9F047;
+    background:                     #00000010;
+    background-alt:                 #FFFFFF20;
     text-color:                     #D8DEE9;
     selected-text-color:            #000000;
     primary:                        #A3BE8C;
@@ -30,6 +30,9 @@ entry  {
     background-color:               #ffffff20;
     border-color:                   @text-color;
     font:                           "SF Display 15";
+    placeholder:                    "Search";
+    placeholder-color:              @text-color;
+    blink:                          true;
 }
 
 mainbox {
@@ -47,7 +50,7 @@ listview {
 element {
     orientation: vertical;
     padding: 2% 0;
-    border-radius: 4;
+    border-radius: 40;
 }
 
 element normal.urgent, element alternate.urgent {
@@ -56,12 +59,10 @@ element normal.urgent, element alternate.urgent {
 
 element normal.active, element alternate.active {
     background-color:               @background-alt;
-    color:                          @selected-text-color;
 }
 
 element selected {
     background-color:               @background-alt;
-    color:                          @selected-text-color;
 }
 
 element selected.urgent {
@@ -70,7 +71,6 @@ element selected.urgent {
 
 element selected.active {
     background-color:               @background-alt;
-    color:                          @selected-text-color;
 }
 
 element-icon {
