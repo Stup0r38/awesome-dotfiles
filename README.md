@@ -191,6 +191,5 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + workspace switcher with thumbnails
 + change volume / brightness to extend out from side similar to other widgets in theme
 + flatten left panel + darken top panel on maximized window or maximized layout
-+ switch to [picom-tryone-git](https://github.com/tryone144/compton/tree/feature/dual_kawase)
 + fix transparent round corners blurring
 + lock screen
