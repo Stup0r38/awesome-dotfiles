@@ -118,9 +118,9 @@ local TopPanel = function(s)
     ontop = true,
     type = "dock",
     screen = s,
-    height = dpi(26),
-    width = s.geometry.width,
-    x = s.geometry.x,
+    height = beautiful.top_panel_height,
+    width = s.geometry.width - beautiful.left_panel_width,
+    x = s.geometry.x + beautiful.left_panel_width,
     y = s.geometry.y,
     stretch = false,
     bg = "#00000000",
@@ -142,6 +142,14 @@ local TopPanel = function(s)
       require('widgets.battery'),
     }
   }
+
+  function maximizeTopPanel(bool)
+    if bool then
+      panel.bg = "#000000"
+    else
+      panel.bg = "#00000000"
+    end
+  end
 
   return panel
 end

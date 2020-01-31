@@ -36,11 +36,21 @@ require("components.brightness-osd")
 require("components.volume-osd")
 --require("components.round-client")
 
+-- Import tag settings
 require("tags")
+
 
 -- ===================================================================
 -- Signals
 -- ===================================================================
+
+
+-- Define screen area
+for s in screen do
+    s.padding = {
+        top = beautiful.top_panel_height
+    }
+end
 
 
 -- Signal function to execute when a new client appears.

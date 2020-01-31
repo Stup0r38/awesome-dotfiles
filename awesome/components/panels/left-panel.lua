@@ -50,6 +50,15 @@ local LeftPanel = function(s)
   }
 
   function maximizeLeftPanel(bool)
+    if bool then
+      left_panel.shape = function(cr, width, height)
+        gears.shape.rectangle(cr, width, height)
+      end
+    else
+      left_panel.shape = function(cr, width, height)
+        gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 12)
+      end
+    end
   end
 end
 
