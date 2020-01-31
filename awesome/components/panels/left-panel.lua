@@ -26,12 +26,12 @@ local LeftPanel = function(s)
   local left_panel = awful.wibar({
     position = "left",
     screen = s,
-    bg = "#000000",
+    bg = "#090B0C",
     fg = beautiful.fg_normal,
-    width = dpi(55),
+    width = beautiful.left_panel_width,
     height = s.geometry.height,
     shape = function(cr, width, height)
-      gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 12)
+      gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 35)
     end
   })
 
@@ -42,9 +42,7 @@ local LeftPanel = function(s)
     {
       layout = wibox.layout.fixed.vertical,
       -- add dock widget
-      -- require("widgets.dock"),
-      -- add folders widget
-      require("widgets.xdg-folders"),
+      require("widgets.dock")
     },
     nil
   }
@@ -56,7 +54,7 @@ local LeftPanel = function(s)
       end
     else
       left_panel.shape = function(cr, width, height)
-        gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 12)
+        gears.shape.partially_rounded_rect(cr, width, height, false, true, true, false, 35)
       end
     end
   end

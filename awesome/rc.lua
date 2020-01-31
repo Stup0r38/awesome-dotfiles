@@ -34,7 +34,7 @@ require("components.panels")
 require("components.exit-screen")
 require("components.brightness-osd")
 require("components.volume-osd")
---require("components.round-client")
+require("components.round-client")
 
 -- Import tag settings
 require("tags")

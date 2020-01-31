@@ -184,8 +184,8 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 ## TO DO ##
 + panels on top, rofi placement, rofi with round corners
 + iconography, top panel
-+ dock for left panel
-+ fix colors + blur
++ function to generate dock members
++ fix blur
 + time/weather widget
 + workspace switcher with thumbnails
 + change volume / brightness to extend out from side similar to other widgets in theme

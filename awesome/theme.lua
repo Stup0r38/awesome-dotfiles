@@ -27,7 +27,7 @@ theme.font          = "SF Pro Text 9"
 theme.title_font    = "SF Pro Display Bold 11"
 
 -- Background
-theme.bg_normal     = "#1f243020"
+theme.bg_normal     = "#5B60711A"
 theme.bg_dark       = "#000000"
 theme.bg_focus      = "#151821"
 theme.bg_urgent     = "#3f3f3f"

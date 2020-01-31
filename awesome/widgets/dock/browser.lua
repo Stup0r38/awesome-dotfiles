@@ -9,9 +9,9 @@ local dpi = require('beautiful').xresources.apply_dpi
 local filebrowser = require('apps').filebrowser
 
 local HOME = os.getenv('HOME')
-local PATH_TO_ICONS = HOME .. '/.config/awesome/icons/folders/'
+local PATH_TO_ICONS = HOME .. '/.config/awesome/icons/dock/'
 
-local trashWidget =
+local docuWidget =
   wibox.widget {
   {
     id = 'icon',
@@ -21,12 +21,15 @@ local trashWidget =
   layout = wibox.layout.align.horizontal
 }
 
-local trash_button = clickable_container(wibox.container.margin(trashWidget, dpi(8), dpi(8), dpi(8), dpi(8)))
-trash_button:buttons(
+local docu_button = clickable_container(wibox.container.margin(docuWidget, dpi(8), dpi(8), dpi(8), dpi(8)))
+docu_button:buttons(
   gears.table.join(
-    awful.button({}, 1, nil,
+    awful.button(
+      {},
+      1,
+      nil,
       function()
-        awful.spawn.easy_async_with_shell(filebrowser .. " trash://", function(stderr) end, 1)
+        awful.spawn.easy_async_with_shell(filebrowser .. " $HOME/Documents", function(stderr) end, 1)
       end
     )
   )
@@ -35,16 +38,16 @@ trash_button:buttons(
 -- Alternative to naughty.notify - tooltip. You can compare both and choose the preferred one
 awful.tooltip(
   {
-    objects = {trash_button},
+    objects = {docu_button},
     mode = 'outside',
     align = 'right',
     timer_function = function()
-      return 'Trash'
+      return 'Browser'
     end,
     preferred_positions = {'right', 'left', 'top', 'bottom'}
   }
 )
 
-trashWidget.icon:set_image(PATH_TO_ICONS .. 'trash' .. '.png')
+docuWidget.icon:set_image(PATH_TO_ICONS .. 'browser.svg')
 
-return trash_button
+return docu_button
