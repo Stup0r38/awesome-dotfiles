@@ -2,28 +2,12 @@ local awful = require('awful')
 local gears = require('gears')
 local beautiful = require('beautiful')
 
-local function renderClient(client, mode)
-  if client.skip_decoration or (client.rendering_mode == mode) then
-    return
-  end
-
-  client.rendering_mode = mode
-  client.floating = false
-  client.maximized = false
-  client.above = false
-  client.below = false
-  client.ontop = false
-  client.sticky = false
-  client.maximized_horizontal = false
-  client.maximized_vertical = false
-
-  if client.rendering_mode == 'maximized' then
-    client.border_width = 0
+local function renderClient(client)
+  if client.fullscreen == true then
     client.shape = function(cr, w, h)
       gears.shape.rectangle(cr, w, h)
     end
-  elseif client.rendering_mode == 'tiled' or client.rendering_mode == 'floating' or client.rendering_mode == 'dwindle' then
-    client.border_width = beautiful.border_width
+  else
     client.shape = function(cr, w, h)
       gears.shape.rounded_rect(cr, w, h, beautiful.corner_radius)
     end
@@ -49,7 +33,7 @@ local function changesOnScreen(currentScreen)
   end
 
   for _, client in pairs(clientsToManage) do
-    renderClient(client, currentScreen.client_mode)
+    renderClient(client)
   end
   changesOnScreenCalled = false
 end
@@ -95,7 +79,7 @@ client.connect_signal(
   'property::fullscreen',
   function(c)
     if c.fullscreen then
-      renderClient(c, 'maximized')
+      renderClient(c)
     else
       clientCallback(c)
     end
