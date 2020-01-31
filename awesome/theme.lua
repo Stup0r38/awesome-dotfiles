@@ -54,9 +54,13 @@ theme.border_focus          = "#ff8a65"
 theme.border_marked         = theme.fg_urgent
 
 -- Titlebars
+theme.titlebars_enabled = true
+theme.titlebar_size = dpi(32)
+theme.titlebar_bg_focus = theme.bg_focus
+theme.titlebar_bg_normal = theme.bg_normal
+theme.titlebar_fg_focus = theme.fg_normal
+theme.titlebar_fg_normal = theme.fg_focus
 theme.titlebar_font = theme.title_font
-theme.titlebar_bg = theme.bg_normal
-theme.titlebar_bg_focus = theme.titlebar_bg -- make titlebars not change color when focused
 
 -- Taglist
 theme.taglist_bg_empty = theme.bg_normal

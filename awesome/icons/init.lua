@@ -17,7 +17,5 @@ return {
   lock = dir .. 'lock.svg',
   brightness = dir .. 'brightness.png',
   volume = dir .. 'volume.png',
-  close = dir .. 'close.svg',
-  open = dir .. 'open.svg',
   restart = dir .. 'restart.svg'
 }

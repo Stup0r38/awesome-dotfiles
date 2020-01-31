@@ -35,6 +35,7 @@ require("components.exit-screen")
 require("components.brightness-osd")
 require("components.volume-osd")
 require("components.round-client")
+require("components.titlebar")
 
 -- Import tag settings
 require("tags")
