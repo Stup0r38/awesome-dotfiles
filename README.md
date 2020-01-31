@@ -1,9 +1,9 @@
 # awesome-dotfiles
 [![HitCount](http://hits.dwyl.io/willpower3309/awesome-dotfiles.svg)](http://hits.dwyl.io/willpower3309/awesome-dotfiles)
 
-![](/screenshot.png)
-![](/screenshot2.jpg)
-![](/screenshot3.jpg)
+![](/screenshots/screenshot.png)
+![](/screenshots/screenshot2.jpg)
+![](/screenshots/screenshot3.jpg)
 
 ## Contents ##
 1. [Details](#details)
