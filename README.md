@@ -182,11 +182,12 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + If you would like to change the wallpaper, ensure that the wallpaper is named "wallpaper" and is located in the `~/.config/awesome` folder. Also ensure that you delete the blurred wallpaper file in order for the blurring script to recognize it needs to generate a new blurred wallpaper
 
 ## TO DO ##
-+ panels on top, rofi placement
-+ iconography, top panel
-+ function to generate dock members
-+ fix blur
++ rofi placement
++ iconography
++ better way to generate dock members (make file called dock_app, with arguments matching desired apps / icon)
++ fix blur strength
 + time/weather widget
++ battery widget
 + workspace switcher with thumbnails
 + change volume / brightness to extend out from side similar to other widgets in theme
 + fix transparent round corners blurring
