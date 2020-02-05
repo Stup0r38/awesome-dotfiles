@@ -1,8 +1,8 @@
 # Material Mirage Theme
 
-![](/screenshots/screenshot.png)
-![](/screenshots/screenshot2.jpg)
-![](/screenshots/screenshot3.jpg)
+![]("https://github.com/WillPower3309/awesome-dotfiles/blob/new_theme/Material%C2%A0Mirage/screenshots/screenshot.png)
+![]("https://github.com/WillPower3309/awesome-dotfiles/blob/new_theme/Material%C2%A0Mirage/screenshots/screenshot2.jpg)
+![]("https://github.com/WillPower3309/awesome-dotfiles/blob/new_theme/Material%C2%A0Mirage/screenshots/screenshot3.jpg)
 
 ## Contents ##
 1. [Details](#details)
