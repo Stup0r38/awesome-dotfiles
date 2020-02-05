@@ -1,6 +1,6 @@
 # Pastel Theme
 
-![](/screenshot.png)
+![](/https://github.com/WillPower3309/awesome-dotfiles/blob/new_theme/screenshots/pastel.png)
 
 ## Contents ##
 1. [Details](#details)
