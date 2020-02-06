@@ -20,7 +20,7 @@ require("awful.autofocus")
 -- Import theme
 local beautiful = require("beautiful")
 beautiful.init(config_dir .. "/theme.lua")
-gears.wallpaper.maximized(config_dir .. "/pictures/wallpaper.png")
+gears.wallpaper.maximized(config_dir .. "/wallpaper.png")
 
 -- Import rules
 awful.rules.rules = require("rules")

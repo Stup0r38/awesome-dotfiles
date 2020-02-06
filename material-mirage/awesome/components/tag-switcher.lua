@@ -15,7 +15,26 @@ local dpi = require('beautiful').xresources.apply_dpi
 -- ===================================================================
 
 
-local thumbnail_dir = gears.filesystem.get_configuration_dir() .. "/pictures/tag-thumbnails/"
+local thumbnail_dir = "/tmp/tag-thumbnails/"
+
+
+--- Check if a file or directory exists in this path
+local function exists(file)
+    local ok, err, code = os.rename(file, file)
+    if not ok then
+        if code == 13 then
+            -- Permission denied, but it exists
+            return true
+        end
+    end
+    return ok, err
+end
+
+
+-- create the thumbnail directory if it does not exist
+if not exists(thumbnail_dir) then
+    awful.spawn.with_shell("mkdir " .. thumbnail_dir)
+end
 
 
 -- Capture a thumbnail

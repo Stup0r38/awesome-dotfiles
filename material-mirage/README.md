@@ -189,10 +189,9 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + battery widget
 + workspace switcher with thumbnails
   + add delay to thumbnail capture
-  + delete thumbnails on exit (store in temp folder??)
   + add gitignore for thumbnails
 + change volume / brightness to extend out from side similar to other widgets in theme
 + fix transparent round corners blurring
 + lock screen
-+ prune round-client, and client decoration
++ fix & prune round-client, and client decoration
 + add animations
