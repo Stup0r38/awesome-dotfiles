@@ -192,3 +192,4 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + fix transparent round corners blurring
 + lock screen
 + prune round-client, and client decoration
++ add animations
