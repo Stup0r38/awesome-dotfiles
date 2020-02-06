@@ -33,6 +33,7 @@ theme.bg_focus      = "#151821"
 theme.bg_urgent     = "#3f3f3f"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
+theme.panel_color = "#090B0C"
 
 -- Foreground
 theme.fg_normal     = "#ffffff"

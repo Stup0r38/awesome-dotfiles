@@ -145,7 +145,7 @@ local TopPanel = function(s)
 
   function maximizeTopPanel(bool)
     if bool then
-      panel.bg = "#000000"
+      panel.bg = beautiful.panel_color
     else
       panel.bg = "#00000000"
     end
