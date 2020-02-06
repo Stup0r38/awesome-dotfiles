@@ -59,6 +59,16 @@ keys.clientbuttons = gears.table.join(
 
 
 keys.globalkeys = gears.table.join(
+
+
+    -- Spawn tag switcher
+    awful.key({ modkey }, "r",
+        function ()
+            showTagSwitcher()
+        end,
+        {description = "open the tag switcher", group = "hotkeys"}
+    ),
+
     -- =========================================
     -- APPLICATION KEY BINDINGS
     -- =========================================

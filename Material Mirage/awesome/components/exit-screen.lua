@@ -149,7 +149,7 @@ exit_screen =
 
 -- define exit screen foreground and background
 exit_screen.bg = beautiful.bg_normal
-exit_screen.fg = '#FEFEFE'
+exit_screen.fg = beautiful.fg_normal
 
 local exit_screen_grabber
 
@@ -187,17 +187,13 @@ end
 exit_screen:buttons(
   gears.table.join(
     -- Middle click - Hide exit_screen
-    awful.button(
-      {},
-      2,
+    awful.button({}, 2,
       function()
         exit_screen_hide()
       end
     ),
     -- Right click - Hide exit_screen
-    awful.button(
-      {},
-      3,
+    awful.button({}, 3,
       function()
         exit_screen_hide()
       end

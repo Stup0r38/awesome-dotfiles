@@ -1,7 +1,6 @@
 local wibox = require('wibox')
 local dpi = require('beautiful').xresources.apply_dpi
 
-
 local separator =  wibox.widget
   {
     orientation = 'horizontal',
@@ -15,11 +14,11 @@ return wibox.widget {
   {
     require("widgets.dock.browser"),
     require("widgets.dock.terminal"),
-    require("widgets.dock.messenger"),
     require("widgets.dock.files"),
-    require("widgets.dock.media"),
-    require("widgets.dock.design"),
     require("widgets.dock.games"),
+    require("widgets.dock.media"),
+    require("widgets.dock.messenger"),
+    require("widgets.dock.design"),
     layout = wibox.layout.fixed.vertical
   }
 }

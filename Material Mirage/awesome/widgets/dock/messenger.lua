@@ -6,12 +6,12 @@ local clickable_container = require('widgets.clickable-container')
 local gears = require('gears')
 local dpi = require('beautiful').xresources.apply_dpi
 
-local filebrowser = require('apps').filebrowser
+local apps = require('apps')
 
 local HOME = os.getenv('HOME')
 local PATH_TO_ICONS = HOME .. '/.config/awesome/icons/dock/'
 
-local dlWidget =
+local homeWidget =
   wibox.widget {
   {
     id = 'icon',
@@ -21,15 +21,12 @@ local dlWidget =
   layout = wibox.layout.align.horizontal
 }
 
-local downloads_button = clickable_container(wibox.container.margin(dlWidget, dpi(8), dpi(8), dpi(8), dpi(8)))
-downloads_button:buttons(
+local home_button = clickable_container(wibox.container.margin(homeWidget, dpi(8), dpi(8), dpi(8), dpi(8)))
+home_button:buttons(
   gears.table.join(
-    awful.button(
-      {},
-      1,
-      nil,
+    awful.button({}, 1, nil,
       function()
-        awful.spawn.easy_async_with_shell(filebrowser .. " $HOME/Downloads", function(stderr) end, 1)
+        awful.spawn("discord")
       end
     )
   )
@@ -38,16 +35,16 @@ downloads_button:buttons(
 -- Alternative to naughty.notify - tooltip. You can compare both and choose the preferred one
 awful.tooltip(
   {
-    objects = {downloads_button},
+    objects = {home_button},
     mode = 'outside',
     align = 'right',
     timer_function = function()
-      return 'Downloads'
+      return 'Social'
     end,
     preferred_positions = {'right', 'left', 'top', 'bottom'}
   }
 )
 
-dlWidget.icon:set_image(PATH_TO_ICONS .. 'messenger.svg')
+homeWidget.icon:set_image(PATH_TO_ICONS .. 'messenger.svg')
 
-return downloads_button
+return home_button
