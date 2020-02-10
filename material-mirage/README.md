@@ -188,8 +188,9 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + time/weather widget
 + battery widget
 + workspace switcher with thumbnails
-  + add delay to thumbnail capture
+  + [add delay to thumbnail capture](https://www.cyberciti.biz/faq/linux-unix-sleep-bash-scripting/)
   + add gitignore for thumbnails
+  + spawn switcher when tag switch
 + change volume / brightness to extend out from side similar to other widgets in theme
 + fix transparent round corners blurring
 + lock screen
