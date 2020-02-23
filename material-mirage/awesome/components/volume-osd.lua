@@ -38,6 +38,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     bg = "#00000000",
     x = s.geometry.width - offsetx,
     y = (s.geometry.height - offsety) / 2,
+    shape = gears.shape.rounded_rect
   }
   -- Put its items in a shaped container
   volumeOverlay:setup {
