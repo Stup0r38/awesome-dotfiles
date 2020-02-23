@@ -3,11 +3,6 @@ local gears = require("gears")
 local beautiful = require("beautiful")
 local dpi = require('beautiful').xresources.apply_dpi
 
--- Client's shape
-local round_corner_client = function(cr, width, height)
-  gears.shape.rounded_rect(cr, width, height, beautiful.corner_radius)
-end
-
 -- Catch the Signal when a client is created
 _G.client.connect_signal("manage", function(c)
   
@@ -34,46 +29,8 @@ _G.screen.connect_signal("arrange", function(s)
       else 
         awful.titlebar.hide(c, 'top')
       end
-      if c.maximized or not c.round_corners or c.fullscreen then
-        c.shape = function(cr, w, h)
-          gears.shape.rectangle(cr, w, h)
-        end
-      else 
-        c.shape = round_corner_client
-      end
     elseif (#s.tiled_clients == 1 or c.first_tag.layout.name == 'max') and not c.fullscreen then
       awful.titlebar.hide(c, 'top')
-      c.shape = function(cr, w, h)
-        gears.shape.rectangle(cr, w, h)
-      end
-    end
-  end
-end)
-
--- Catch the signal when client is maximized
-_G.client.connect_signal("property::maximized", function(c)
-  
-  -- Make the client rectangle
-  c.shape = function(cr, w, h)
-    gears.shape.rectangle(cr, w, h)
-  end
-
-  if not c.maximized then
-    -- Return rounded corners on unmaximized
-    c.shape = round_corner_client
-  end
-end)
-
-
--- Catch the signal when client is floating
-_G.client.connect_signal("property::floating", function(c)
-
-  -- Make sure to have an instance name
-  -- It is here to prevent errors on startup or every after awesome.restart()
-  if c.instance then
-    -- Center all clients except QuakeTerminal and the clients with skip_center property
-    if not c.skip_center then
-      awful.placement.centered(c)
     end
   end
 end)
