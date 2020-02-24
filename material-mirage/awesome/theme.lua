@@ -56,7 +56,7 @@ theme.border_marked         = theme.fg_urgent
 
 -- Titlebars
 theme.titlebars_enabled = true
-theme.titlebar_size = dpi(32)
+theme.titlebar_size = dpi(28)
 theme.titlebar_bg_focus = theme.bg_normal
 theme.titlebar_bg_normal = theme.bg_normal
 theme.titlebar_fg_focus = theme.fg_normal

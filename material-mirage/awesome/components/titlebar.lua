@@ -5,12 +5,7 @@ local beautiful = require("beautiful")
 local wibox = require("wibox")
 
 -- Titlebar button themes
-local titlebar_icon_path = os.getenv("HOME") .. "/.config/awesome/icons/titlebar/"
-local tip = titlebar_icon_path --alias to save time/space
-
-local titlebars = {}
-local theme = {}
-local dpi = require('beautiful').xresources.apply_dpi
+local tip = os.getenv("HOME") .. "/.config/awesome/icons/titlebar/"
 
 -- Hide tooltips when hover on titlebar buttons
 awful.titlebar.enable_tooltip = false
