@@ -11,7 +11,7 @@ local dpi = require('beautiful').xresources.apply_dpi
 
 
 -- ===================================================================
--- Thumbnail Generation
+-- Thumbnail Image Generation
 -- ===================================================================
 
 
@@ -22,10 +22,8 @@ awful.spawn.with_shell("mkdir " .. thumbnail_dir)
 
 -- Capture a thumbnail
 local function capture_thumbnail(tag)
-    -- delay to allow screen to update before capturing thumbnail
-    -- DO ME
     -- capture thumbnail
-    awful.spawn.with_shell("scrot -e 'mv $f " .. thumbnail_dir .. tag.name .. ".jpg 2>/dev/null'", false)
+    awful.spawn.with_shell("sleep 0.3; scrot -e 'mv $f " .. thumbnail_dir .. tag.name .. ".jpg 2>/dev/null'", false)
 end
 
 
@@ -64,40 +62,34 @@ end)
 
 
 -- ===================================================================
--- Overlay Tag Thumbnail Widget Creation
+-- Thumbnail Widget Creation
 -- ===================================================================
 
 
-local icon_size = dpi(90)
+local overlayHeight = dpi(200)
+local thumbnailMargin = dpi(50)
 
-local buildButton = function(icon)
-    local abutton = wibox.widget {
-        wibox.widget {
-            wibox.widget {
-                wibox.widget {
-                    image = icon,
-                    widget = wibox.widget.imagebox
-                },
-                top = dpi(16),
-                bottom = dpi(16),
-                left = dpi(16),
-                right = dpi(16),
-                widget = wibox.container.margin
-            },
-            shape = gears.shape.circle,
-            forced_width = icon_size,
-            forced_height = icon_size,
-            widget = clickable_container
-        },
-        left = dpi(24),
-        right = dpi(24),
+local function makeThumbnail(image)
+    imagebox = wibox.widget {
+        image = thumbnail_dir .. "/" .. image .. ".jpg",
+        clip_shape = function(cr, w, h)
+            gears.shape.rounded_rect(cr, w, h, dpi(10))
+        end,
+        forced_height = overlayHeight * 0.70,
+        widget = wibox.widget.imagebox,
+    }
+    -- add imagebox:buttons()
+
+    thumbnail = wibox.widget {
+        imagebox,
+        left = thumbnailMargin,
+        right = thumbnailMargin,
+        top = overlayHeight * 0.15,
+        bottom = overlayHeight * 0.15,
         widget = wibox.container.margin
     }
-
-  return abutton
+    return thumbnail
 end
-
-thumbnailOneTest = buildButton(thumbnail_dir .. "/1.jpg")
 
 
 -- ===================================================================
@@ -112,11 +104,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
         ontop = true,
         screen = s,
         type = "normal",
-        height = dpi(300),
+        height = overlayHeight,
         width = s.geometry.width,
         bg = beautiful.bg_normal,
         shape = function(cr, width, height)
-          gears.shape.partially_rounded_rect(cr, width, height, false, false, true, true, 35)
+            gears.shape.partially_rounded_rect(cr, width, height, false, false, true, true, 40)
         end,
         x = 0,
         y = 0,
@@ -125,8 +117,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
     -- Put its items in a shaped container
     tagSwitcherOverlay:setup {
         -- Container
+        expand = "none",
+        layout = wibox.layout.align.horizontal,
+        nil,
         {
-            thumbnailOneTest,
+            makeThumbnail("1"),
             layout = wibox.layout.align.vertical
         },
         -- The real background color & shape
@@ -147,6 +142,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     }
 
     function showTagSwitcher()
+        -- TODO Generate Thumbnail Widgets
         tagSwitcherOverlay.visible = true
     end
 end)
