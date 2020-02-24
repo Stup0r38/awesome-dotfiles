@@ -64,6 +64,43 @@ end)
 
 
 -- ===================================================================
+-- Overlay Tag Thumbnail Widget Creation
+-- ===================================================================
+
+
+local icon_size = dpi(90)
+
+local buildButton = function(icon)
+    local abutton = wibox.widget {
+        wibox.widget {
+            wibox.widget {
+                wibox.widget {
+                    image = icon,
+                    widget = wibox.widget.imagebox
+                },
+                top = dpi(16),
+                bottom = dpi(16),
+                left = dpi(16),
+                right = dpi(16),
+                widget = wibox.container.margin
+            },
+            shape = gears.shape.circle,
+            forced_width = icon_size,
+            forced_height = icon_size,
+            widget = clickable_container
+        },
+        left = dpi(24),
+        right = dpi(24),
+        widget = wibox.container.margin
+    }
+
+  return abutton
+end
+
+thumbnailOneTest = buildButton(thumbnail_dir .. "/1.jpg")
+
+
+-- ===================================================================
 -- Overlay Creation
 -- ===================================================================
 
@@ -78,6 +115,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
         height = dpi(300),
         width = s.geometry.width,
         bg = beautiful.bg_normal,
+        shape = function(cr, width, height)
+          gears.shape.partially_rounded_rect(cr, width, height, false, false, true, true, 35)
+        end,
         x = 0,
         y = 0,
     }
@@ -86,7 +126,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     tagSwitcherOverlay:setup {
         -- Container
         {
-            require("widgets.brightness-slider-osd"),
+            thumbnailOneTest,
             layout = wibox.layout.align.vertical
         },
         -- The real background color & shape

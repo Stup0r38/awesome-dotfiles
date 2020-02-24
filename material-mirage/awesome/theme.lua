@@ -33,7 +33,7 @@ theme.bg_focus      = "#151821"
 theme.bg_urgent     = "#3f3f3f"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
-theme.panel_color = "#090B0C"
+theme.panel_color   = "#090B0C"
 
 -- Foreground
 theme.fg_normal     = "#ffffff"
@@ -57,7 +57,7 @@ theme.border_marked         = theme.fg_urgent
 -- Titlebars
 theme.titlebars_enabled = true
 theme.titlebar_size = dpi(32)
-theme.titlebar_bg_focus = theme.bg_focus
+theme.titlebar_bg_focus = theme.bg_normal
 theme.titlebar_bg_normal = theme.bg_normal
 theme.titlebar_fg_focus = theme.fg_normal
 theme.titlebar_fg_normal = theme.fg_focus
