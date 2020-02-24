@@ -132,17 +132,16 @@ screen.connect_signal("request::desktop_decoration", function(s)
         widget = wibox.container.background()
     }
 
-    -- DISPLAY SIMILAR TO EXIT SCREEN
-    local hideTagSwitcher = gears.timer {
-        timeout = 5,
-        autostart = true,
-        callback  = function()
-            tagSwitcherOverlay.visible = false
-        end
-    }
-
-    function showTagSwitcher()
-        -- TODO Generate Thumbnail Widgets
+    -- Open Tag Switcher on Tag Swap
+    tag.connect_signal('property::selected', function(t)
         tagSwitcherOverlay.visible = true
-    end
+        -- TODO: STAY OPEN IF USER CONTINUES TO SWITCH TAGS
+        gears.timer {
+            timeout = 2,
+            autostart = true,
+            callback  = function()
+                tagSwitcherOverlay.visible = false
+            end
+        }
+    end)
 end)
