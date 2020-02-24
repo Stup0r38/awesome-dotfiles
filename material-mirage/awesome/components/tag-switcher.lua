@@ -134,14 +134,15 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
     -- Open Tag Switcher on Tag Swap
     tag.connect_signal('property::selected', function(t)
-        tagSwitcherOverlay.visible = true
+        --tagSwitcherOverlay.visible = true
+        -- TODO: DONT OPEN ON AWESOME LOAD
         -- TODO: STAY OPEN IF USER CONTINUES TO SWITCH TAGS
-        gears.timer {
-            timeout = 2,
-            autostart = true,
-            callback  = function()
-                tagSwitcherOverlay.visible = false
-            end
-        }
+        --gears.timer {
+        --    timeout = 2,
+        --    autostart = true,
+        --    callback  = function()
+        --        tagSwitcherOverlay.visible = false
+        --    end
+        --}
     end)
 end)

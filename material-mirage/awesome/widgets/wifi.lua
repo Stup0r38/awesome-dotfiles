@@ -28,20 +28,6 @@ local widget =
 local widget_button = clickable_container(wibox.container.margin(widget, dpi(7), dpi(7), dpi(7), dpi(7)))
 widget_button:buttons(
   gears.table.join(
-    awful.button(
-      {},
-      1,
-      nil,
-      function()
-        awful.spawn('wicd-client -n')
-      end
-    )
-  )
-)
-
-local widget_button = clickable_container(wibox.container.margin(widget, dpi(7), dpi(7), dpi(7), dpi(7)))
-widget_button:buttons(
-  gears.table.join(
     awful.button({}, 1, nil,
       function()
         awful.spawn('nm-connection-editor')
