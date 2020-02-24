@@ -23,36 +23,36 @@ local theme = {}
 
 
 -- Font
-theme.font          = "SF Pro Text 9"
-theme.title_font    = "SF Pro Display Bold 11"
+theme.font = "SF Pro Text 9"
+theme.title_font = "SF Pro Display Bold 11"
 
 -- Background
-theme.bg_normal     = "#5B60711A"
-theme.bg_dark       = "#000000"
-theme.bg_focus      = "#151821"
-theme.bg_urgent     = "#3f3f3f"
-theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
-theme.panel_color   = "#090B0C"
+theme.bg_normal = "#5B60711A"
+theme.bg_dark = "#000000"
+theme.bg_focus = "#151821"
+theme.bg_urgent = "#3f3f3f"
+theme.bg_minimize = "#444444"
+theme.bg_systray = theme.bg_normal
+theme.panel_color = "#090B0C"
 
 -- Foreground
-theme.fg_normal     = "#ffffff"
-theme.fg_focus      = "#e4e4e4"
-theme.fg_urgent     = "#cc9393"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal = "#ffffff"
+theme.fg_focus = "#e4e4e4"
+theme.fg_urgent = "#cc9393"
+theme.fg_minimize = "#ffffff"
 
 -- Sizing
-theme.corner_radius       = dpi(10)            -- border radius of rounded theme elements
-theme.useless_gap         = dpi(7)            -- window gap distance
-theme.gap_single_client   = true              -- gaps if only one window is open?
+theme.corner_radius = dpi(20)            -- border radius of rounded theme elements
+theme.useless_gap = dpi(7)            -- window gap distance
+theme.gap_single_client = true              -- gaps if only one window is open?
 theme.top_panel_height = dpi(26)
 theme.left_panel_width = dpi(55)
 
 -- Window Borders
-theme.border_width          = dpi(0)            -- window border width
-theme.border_normal         = theme.bg_normal
-theme.border_focus          = "#ff8a65"
-theme.border_marked         = theme.fg_urgent
+theme.border_width = dpi(0)            -- window border width
+theme.border_normal = theme.bg_normal
+theme.border_focus = "#ff8a65"
+theme.border_marked = theme.fg_urgent
 
 -- Titlebars
 theme.titlebars_enabled = true
