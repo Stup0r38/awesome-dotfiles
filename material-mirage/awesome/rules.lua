@@ -127,12 +127,6 @@ rules = {
       end
     },
 
-    -- Rofi
-    {
-      rule_any = { name = { "rofi" } },
-      properties = { maximized = true, ontop = true }
-    },
-
     -- File chooser dialog
     {
       rule_any = { role = { "GtkFileChooserDialog" } },
