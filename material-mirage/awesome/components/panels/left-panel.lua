@@ -24,6 +24,7 @@ local gears = require('gears')
 
 local LeftPanel = function(s)
   local left_panel = awful.wibar({
+    ontop = true,
     position = "left",
     screen = s,
     bg = beautiful.panel_color,
