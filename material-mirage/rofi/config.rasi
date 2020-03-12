@@ -18,7 +18,7 @@ window {
     location: west;
     anchor: west;
     height: 100%;
-    width: 25%;
+    width: 30%;
     border-radius: 60px;
     transparency: "real";
     background-color: @background;

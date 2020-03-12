@@ -1,7 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
 local beautiful = require("beautiful")
-local dpi = require('beautiful').xresources.apply_dpi
+local dpi = beautiful.xresources.apply_dpi
 
 -- Catch the Signal when a client is created
 _G.client.connect_signal("manage", function(c)
