@@ -14,8 +14,9 @@ local awful = require('awful')
 local beautiful = require('beautiful')
 local wibox = require('wibox')
 local gears = require('gears')
-local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('icons')
+
+local dpi = beautiful.xresources.apply_dpi
 
 -- import widgets
 local mat_icon_button = require('widgets.icon-button')
@@ -71,12 +72,12 @@ end)
 
 local TopPanel = function(s)
   local panel = wibox {
-    ontop = true,
+    ontop = false,
     type = "dock",
     screen = s,
     height = beautiful.top_panel_height,
-    width = s.geometry.width - beautiful.left_panel_width,
-    x = s.geometry.x + beautiful.left_panel_width,
+    width = s.geometry.width,
+    x = s.geometry.x,
     y = s.geometry.y,
     stretch = false,
     bg = "#00000000",

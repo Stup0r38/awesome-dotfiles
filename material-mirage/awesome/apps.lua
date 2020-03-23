@@ -17,7 +17,7 @@ local filesystem = require('gears.filesystem')
 
 local apps = {
     terminal = "kitty",
-    launcher = "rofi -normal-window -modi drun -show drun",
+    launcher = "rofi -modi drun -show drun",
     lock = "i3lock",
     screenshot = "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'",
     filebrowser = "nautilus",

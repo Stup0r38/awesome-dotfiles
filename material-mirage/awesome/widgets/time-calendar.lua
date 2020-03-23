@@ -185,7 +185,7 @@ end)
 
 local clock_widget = wibox.widget {
     {
-        format = "%a %l:%M%P",
+        format = "%a %l:%M %p",
         font = 'SF Display Regular 10',
         refresh = 15,
         widget = wibox.widget.textclock

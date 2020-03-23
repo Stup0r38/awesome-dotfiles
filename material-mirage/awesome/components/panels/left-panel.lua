@@ -12,7 +12,7 @@
 
 local beautiful = require('beautiful')
 local wibox = require('wibox')
-local dpi = require('beautiful').xresources.apply_dpi
+local dpi = beautiful.xresources.apply_dpi
 local awful = require('awful')
 local gears = require('gears')
 
@@ -24,6 +24,7 @@ local gears = require('gears')
 
 local LeftPanel = function(s)
   local left_panel = awful.wibar({
+    ontop = true,
     position = "left",
     screen = s,
     bg = beautiful.panel_color,

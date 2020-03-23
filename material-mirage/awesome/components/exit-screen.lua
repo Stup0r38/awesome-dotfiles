@@ -17,7 +17,7 @@ local beautiful = require('beautiful')
 local icons = require('icons')
 local clickable_container = require('widgets.clickable-container')
 local apps = require('apps')
-local dpi = require('beautiful').xresources.apply_dpi
+local dpi = beautiful.xresources.apply_dpi
 
 
 -- ===================================================================
