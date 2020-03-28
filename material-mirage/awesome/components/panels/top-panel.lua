@@ -84,6 +84,7 @@ local TopPanel = function(s)
     fg = beautiful.fg_normal
   }
 
+  -- add widgets to panel
   panel:setup {
     expand = "none",
     layout = wibox.layout.align.horizontal,

@@ -23,14 +23,13 @@ local left_panel = require('components.panels.left-panel')
 -- Create a wibox for each screen and add it
 screen.connect_signal("request::desktop_decoration", function(s)
   if s.index == 1 then
-      -- Create the left bar
-      s.left_panel = left_panel(s)
-      -- Create the Top bar
-      s.top_panel = top_panel(s)
-    else
-      -- Just create the top bar on non primary displays
-      s.top_panel = top_panel(s)
-    end
+    -- Create the bars
+    s.left_panel = left_panel(s)
+    s.top_panel = top_panel(s)
+  else
+    -- Just create the top bar on non primary displays
+    s.top_panel = top_panel(s)
+  end
 end)
 
 -- Hide bars when app go fullscreen
@@ -69,7 +68,6 @@ client.connect_signal(
   'property::maximized',
   function(c)
     if c.first_tag then
-      maximizeLeftPanel(c.maximized)
       maximizeTopPanel(c.maximized)
     end
   end
@@ -83,7 +81,6 @@ client.connect_signal(
       updateBarsVisibility()
     end
     if c.maximized then
-      maximizeLeftPanel(false)
       maximizeTopPanel(false)
     end
   end
@@ -95,10 +92,8 @@ tag.connect_signal(
   function(t)
     local currentLayout = awful.tag.getproperty(t, 'layout')
     if (currentLayout == awful.layout.suit.max) then
-      maximizeLeftPanel(true)
       maximizeTopPanel(true)
     else
-      maximizeLeftPanel(false)
       maximizeTopPanel(false)
     end
   end
