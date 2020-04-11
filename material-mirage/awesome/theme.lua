@@ -45,8 +45,8 @@ theme.fg_minimize = "#ffffff"
 theme.corner_radius = dpi(20)            -- border radius of rounded theme elements
 theme.useless_gap = dpi(7)            -- window gap distance
 theme.gap_single_client = true              -- gaps if only one window is open?
-theme.top_panel_height = dpi(26)
-theme.left_panel_width = dpi(55)
+theme.top_panel_height = dpi(30)
+theme.left_panel_width = dpi(70)
 
 -- Window Borders
 theme.border_width = dpi(0)            -- window border width

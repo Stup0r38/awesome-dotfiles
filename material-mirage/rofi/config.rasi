@@ -17,9 +17,10 @@ configuration {
 window {
     location: west;
     anchor: west;
+    x-offset: 105px;
     height: 100%;
     width: 30%;
-    border-radius: 60px;
+    border-radius: 0 60px 60px 0;
     transparency: "real";
     background-color: @background;
 }
