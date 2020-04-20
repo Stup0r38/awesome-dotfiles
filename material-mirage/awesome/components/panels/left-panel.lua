@@ -16,6 +16,8 @@ local dpi = require('beautiful').xresources.apply_dpi
 local awful = require('awful')
 local gears = require('gears')
 
+local TagList = require('widgets.tag-list')
+
 
 -- ===================================================================
 -- Bar Creation
@@ -48,7 +50,7 @@ local LeftPanel = function(s)
         require("widgets.layout-box"),
         {
             layout = wibox.layout.fixed.vertical,
-            require("widgets.dock")
+            TagList(s)
         },
         nil
     }

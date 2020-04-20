@@ -11,9 +11,7 @@
 
 
 local dir = os.getenv('HOME') .. '/.config/awesome/icons/tags/'
-local apps = require("apps")
 local awful = require("awful")
-local gears = require("gears")
 local beautiful = require("beautiful")
 
 
@@ -24,39 +22,39 @@ local beautiful = require("beautiful")
 
 local tags = {
   {
-    icon = dir .. 'terminal.png',
+    icon = dir .. 'terminal.svg',
     screen = 1
   },
   {
-    icon = dir .. 'firefox.png',
+    icon = dir .. 'browser.svg',
     screen = 1
   },
   {
-    icon = dir .. 'notepad.png',
+    icon = dir .. 'design.svg',
     screen = 1
   },
   {
-    icon = dir .. 'folder.png',
+    icon = dir .. 'files.svg',
     screen = 1
   },
   {
-    icon = dir .. 'player.png',
+    icon = dir .. 'games.svg',
     screen = 1
   },
   {
-    icon = dir .. 'videogame.png',
+    icon = dir .. 'media.svg',
     screen = 1
   },
   {
-    icon = dir .. 'star.png',
+    icon = dir .. 'messenger.svg',
     screen = 1
   },
   {
-    icon = dir .. 'mail.png',
+    icon = dir .. 'flag.svg',
     screen = 1
   },
   {
-    icon = dir .. 'spotify.png',
+    icon = dir .. 'work.svg',
     screen = 1
   }
 }
