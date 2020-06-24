@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Awesome Dotfiles</h1>
+    <h1>Awesome Dotfiles (TO UPDATE)</h1>
 </div>
 
 [![HitCount](http://hits.dwyl.io/willpower3309/awesome-dotfiles.svg)](http://hits.dwyl.io/willpower3309/awesome-dotfiles)
