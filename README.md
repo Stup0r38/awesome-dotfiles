@@ -19,13 +19,13 @@
 
 <a name="details"></a>
 ## Details ##
-+ **OS**: Arch Linux
++ **OS**: Fedora 32
 + **Shell**: ZSH
 + **WM**: awesome
 + **Theme**: Qogir Dark
 + **Icons**: Tela Dark
-+ **Cursor**: xCursor Breeze Light
-+ **Terminal**: Alacritty
++ **Cursor**: Bibata
++ **Terminal**: Kitty
 
 <a name="features"></a>
 ## Features ##
