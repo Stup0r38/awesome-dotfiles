@@ -21,31 +21,31 @@ local dir = os.getenv("HOME") .. "/.config/awesome/icons/tags/"
 -- define module table
 local tags = {
    {
-      icon = dir .. "terminal.png",
+      icon = dir .. "1.png",
    },
    {
-      icon = dir .. "firefox.png",
+      icon = dir .. "2.png",
    },
    {
-      icon = dir .. "notepad.png",
+      icon = dir .. "3.png",
    },
    {
-      icon = dir .. "folder.png",
+      icon = dir .. "4.png",
    },
    {
-      icon = dir .. "player.png",
+      icon = dir .. "5.png",
    },
    {
-      icon = dir .. "videogame.png",
+      icon = dir .. "6.png",
    },
    {
-      icon = dir .. "star.png",
+      icon = dir .. "7.png",
    },
    {
-      icon = dir .. "mail.png",
+      icon = dir .. "8.png",
    },
    {
-      icon = dir .. "spotify.png",
+      icon = dir .. "9.png",
    }
 }
 

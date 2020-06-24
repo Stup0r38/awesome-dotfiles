@@ -6,16 +6,16 @@
 --      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝
 
 -- ===================================================================
--- Initialization
+-- Imports
 -- ===================================================================
 
 
 local awful = require("awful")
 local beautiful = require("beautiful")
 
--- define screen height and width
 local screen_height = awful.screen.focused().geometry.height
 local screen_width = awful.screen.focused().geometry.width
+--local dpi = require('beautiful').xresources.apply_dpi
 
 -- define module table
 local rules = {}
@@ -26,11 +26,10 @@ local rules = {}
 -- ===================================================================
 
 
--- return a table of client rules including provided keys / buttons
 function rules.create(clientkeys, clientbuttons)
-   return {
-      -- All clients will match this rule.
-      {
+    return {
+        -- All clients will match this rule.
+    {
          rule = {},
          properties = {
             border_width = beautiful.border_width,
@@ -44,8 +43,8 @@ function rules.create(clientkeys, clientbuttons)
 
          },
       },
-      -- Floating clients.
-      {
+        -- Floating clients.
+    {
          rule_any = {
             instance = {
                "DTA",
@@ -107,24 +106,25 @@ function rules.create(clientkeys, clientbuttons)
          end
       },
 
-      -- Rofi
-      {
-         rule_any = {name = {"rofi"}},
-         properties = {maximized = true, ontop = true}
-      },
 
-      -- File chooser dialog
-      {
-         rule_any = {role = {"GtkFileChooserDialog"}},
-         properties = {floating = true, width = screen_width * 0.55, height = screen_height * 0.65}
-      },
+        -- Rofi
+        {
+        rule_any = { name = { "rofi" } },
+        properties = { maximized = false, ontop = true }
+        },
 
-      -- Pavucontrol & Bluetooth Devices
-      {
-         rule_any = {class = {"Pavucontrol"}, name = {"Bluetooth Devices"}},
-         properties = {floating = true, width = screen_width * 0.55, height = screen_height * 0.45}
-      },
-   }
+        -- File chooser dialog
+        {
+        rule_any = { role = { "GtkFileChooserDialog" } },
+        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.65 }
+        },
+
+        -- Pavucontrol & Bluetooth Devices
+        {
+        rule_any = { class = { "Pavucontrol" }, name = { "Bluetooth Devices" } },
+        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.45 }
+        },
+    }
 end
 
 -- return module table

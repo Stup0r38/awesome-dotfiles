@@ -28,7 +28,7 @@ local tag_list = {}
 
 -- Create buttons
 local function create_buttons(buttons, object)
-   if buttons then
+     if buttons then
       local btns = {}
       for _, b in ipairs(buttons) do
          -- Create a proxy button object: it will receive the real
@@ -55,7 +55,7 @@ end
 
 -- Update the taglist
 local function list_update(w, buttons, label, data, objects)
-   -- update the widgets, creating them if needed
+     -- update the widgets, creating them if needed
    w:reset()
    for i, o in ipairs(objects) do
       local cache = data[o]
@@ -67,7 +67,7 @@ local function list_update(w, buttons, label, data, objects)
          tbm = cache.tbm
          ibm = cache.ibm
       else
-         local icondpi = 10
+         local icondpi = 2
          ib = wibox.widget.imagebox()
          tb = wibox.widget.textbox()
          bgb = wibox.container.background()
@@ -161,7 +161,7 @@ tag_list.create = function(s)
       ),
       {},
       list_update,
-      wibox.layout.fixed.vertical()
+      wibox.layout.fixed.horizontal()
    )
 end
 

@@ -29,7 +29,7 @@ local task_list = {}
 
 
 local function create_buttons(buttons, object)
-   if buttons then
+     if buttons then
       local btns = {}
       for _, b in ipairs(buttons) do
          -- Create a proxy button object: it will receive the real
@@ -56,7 +56,7 @@ end
 
 
 local function list_update(w, buttons, label, data, objects)
-   -- update the widgets, creating them if needed
+     -- update the widgets, creating them if needed
    w:reset()
    for i, o in ipairs(objects) do
       local cache = data[o]
@@ -71,14 +71,13 @@ local function list_update(w, buttons, label, data, objects)
       else
          ib = wibox.widget.imagebox()
          tb = wibox.widget.textbox()
-         cb = clickable_container(wibox.container.margin(wibox.widget.imagebox(ICON_DIR .. "close.svg"), dpi(6), dpi(6), dpi(6), dpi(6)))
-         cb.shape = gears.shape.circle
+         cb = clickable_container(wibox.container.margin(wibox.widget.imagebox(ICON_DIR .. "close.svg"), dpi(6), dpi(6), dpi(6), dpi(6)))         cb.shape = gears.shape.circle
          cbm = wibox.container.margin(cb, dpi(4), dpi(8), dpi(2), dpi(2)) -- 4, 8 ,12 ,12 -- close button
          cbm:buttons(gears.table.join(awful.button({}, 1, nil,
             function()
                o.kill(o)
             end
-         )))
+          )))
          bg_clickable = clickable_container()
          bgb = wibox.container.background()
          tbm = wibox.container.margin(tb, dpi(4), dpi(4))
@@ -163,7 +162,8 @@ end
 -- ===================================================================
 
 
-local tasklist_buttons = awful.util.table.join(
+local tasklist_buttons =
+  awful.util.table.join(
    awful.button({}, 1,
       function(c)
          if c == client.focus then
@@ -181,7 +181,7 @@ local tasklist_buttons = awful.util.table.join(
            c:raise()
          end
       end
-   ),
+    ),
    awful.button({}, 2,
       function(c)
          c.kill(c)
@@ -198,7 +198,6 @@ local tasklist_buttons = awful.util.table.join(
       end
    )
 )
-
 
 task_list.create = function(s)
    return awful.widget.tasklist(

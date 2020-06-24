@@ -11,8 +11,8 @@
 -- ===================================================================
 
 
-local awful = require("awful")
-local filesystem = require("gears.filesystem")
+local awful = require('awful')
+local filesystem = require('gears.filesystem')
 
 -- define module table
 local apps = {}
@@ -23,20 +23,22 @@ local apps = {}
 -- ===================================================================
 
 
--- define default apps
 apps.default = {
-   terminal = "alacritty",
-   launcher = "rofi -normal-window -modi drun -show drun",
-   lock = "i3lock",
-   screenshot = "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'",
-   filebrowser = "nautilus"
+    terminal = "kitty",
+    launcher = "rofi -modi drun -show drun",
+    lock = "xscreensaver-command -lock",
+    screenshot = "gnome-screenshot",
+    filebrowser = "pcmanfm",
+    browser = "firefox",
+    editor = "micro"
 }
 
 -- List of apps to start once on start-up
+--VEDI SE AGGIUNGERE QUI VOLUMEICON E XFCE POWER MANAGER
 local run_on_start_up = {
-   "picom",
-   "redshift",
-   "unclutter"
+    "picom",
+    "redshift",
+    "unclutter"
 }
 
 
@@ -45,7 +47,7 @@ local run_on_start_up = {
 -- ===================================================================
 
 
--- Run all the apps listed in run_on_start_up
+-- Run all the apps listed in run_on_start_up when awesome starts
 function apps.autostart()
    for _, app in ipairs(run_on_start_up) do
       local findme = app

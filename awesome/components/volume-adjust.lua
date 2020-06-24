@@ -69,7 +69,7 @@ volume_adjust:setup {
 -- create a 4 second timer to hide the volume adjust
 -- component whenever the timer is started
 local hide_volume_adjust = gears.timer {
-   timeout = 4,
+   timeout = 3,
    autostart = true,
    callback = function()
       volume_adjust.visible = false

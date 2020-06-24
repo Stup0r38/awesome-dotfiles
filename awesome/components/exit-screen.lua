@@ -17,12 +17,11 @@ local beautiful = require("beautiful")
 local clickable_container = require("widgets.clickable-container")
 
 local apps = require("apps").default
-local dpi = beautiful.xresources.apply_dpi
+local dpi = require("beautiful").xresources.apply_dpi
 local ICON_DIR = gears.filesystem.get_configuration_dir() .. "/icons/exit-screen/"
 
 -- define module table
 local exit_screen = {}
-
 
 -- ===================================================================
 -- Appearance
@@ -34,7 +33,7 @@ local icon_size = dpi(90)
 local build_button = function(icon)
    local button = wibox.widget {
       wibox.widget {
-         wibox.widget {
+        wibox.widget {
             wibox.widget {
                image = icon,
                widget = wibox.widget.imagebox
@@ -68,7 +67,7 @@ local exit_screen_grabber
 
 local function suspend_command()
    exit_screen.hide()
-   awful.spawn.with_shell(apps.lock .. " & systemctl suspend")
+   awful.spawn.with_shell(apps.lock .. ' & systemctl suspend')
 end
 
 local function exit_command()
@@ -77,22 +76,22 @@ end
 
 local function lock_command()
    exit_screen.hide()
-   awful.spawn.with_shell("sleep 1 && " .. apps.lock)
+   awful.spawn.with_shell('sleep 1 && ' .. apps.lock)
 end
 
 local function poweroff_command()
-   awful.spawn.with_shell("poweroff")
+   awful.spawn.with_shell('poweroff')
    awful.keygrabber.stop(exit_screen_grabber)
 end
 
 local function reboot_command()
-   awful.spawn.with_shell("reboot")
+   awful.spawn.with_shell('reboot')
    awful.keygrabber.stop(exit_screen_grabber)
 end
 
 local poweroff = build_button(ICON_DIR .. "power.png", "Shutdown")
 poweroff:connect_signal(
-   "button::release",
+     "button::release",
    function()
       poweroff_command()
    end
@@ -100,7 +99,7 @@ poweroff:connect_signal(
 
 local reboot = build_button(ICON_DIR .. "restart.png", "Restart")
 reboot:connect_signal(
-   "button::release",
+     "button::release",
    function()
       reboot_command()
    end
@@ -116,7 +115,7 @@ suspend:connect_signal(
 
 local exit = build_button(ICON_DIR .. "logout.png", "Logout")
 exit:connect_signal(
-   "button::release",
+     "button::release",
    function()
       exit_command()
    end
@@ -124,7 +123,7 @@ exit:connect_signal(
 
 local lock = build_button(ICON_DIR .. "lock.png", "Lock")
 lock:connect_signal(
-   "button::release",
+     "button::release",
    function()
       lock_command()
    end
@@ -139,7 +138,7 @@ awesome.connect_signal("show_exit_screen",
             if event == "release" then
                return
             end
-
+            
             if key == "s" then
                suspend_command()
             elseif key == "e" then
@@ -158,12 +157,6 @@ awesome.connect_signal("show_exit_screen",
       exit_screen.widget.visible = true
    end
 )
-
--- hide exit screen
-function exit_screen.hide()
-   awful.keygrabber.stop(exit_screen_grabber)
-   exit_screen.widget.visible = false
-end
 
 
 -- ===================================================================
@@ -184,8 +177,15 @@ exit_screen.widget = wibox({
    width = screen_geometry.width
 })
 
+
+-- hide exit screen
+function exit_screen.hide()
+   awful.keygrabber.stop(exit_screen_grabber)
+   exit_screen.widget.visible = false
+end
+
 exit_screen.widget:buttons(
-   gears.table.join(
+     gears.table.join(
       -- Middle click - Hide exit_screen
       awful.button({}, 2,
          function()
