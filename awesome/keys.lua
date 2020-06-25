@@ -488,14 +488,14 @@ keys.globalkeys = gears.table.join(
         function ()
             awful.layout.inc(1)
         end,
-        {description = "select next", group = "layout"}
+        {description = "select next layout", group = "layout"}
     ),
     -- select previous layout
     awful.key({ modkey, "Shift" }, "space",
         function ()
             awful.layout.inc(-1)
         end,
-        {description = "select previous", group = "layout"}
+        {description = "select previous layout", group = "layout"}
     ),
 
     -- =========================================
@@ -522,7 +522,6 @@ keys.clientkeys = gears.table.join(
     awful.key({ modkey }, "F11",
         function (c)
             c.fullscreen = not c.fullscreen
---            c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}
     ),

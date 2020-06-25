@@ -62,7 +62,7 @@ awful.tooltip({
 
 --rotondità degli spigoli del calendario
 local cal_shape = function(cr, width, height)
-   gears.shape.partially_rounded_rect(cr, width, height, false, false, true, true, 12)
+   gears.shape.partially_rounded_rect(cr, width, height, false, false, false, false, 12)
 end
 
 -- Calendar Widget
@@ -72,7 +72,7 @@ local month_calendar = awful.widget.calendar_popup.month({
    font = beautiful.title_font,
    long_weekdays = true,
    margin = 0, -- 10
-   style_month = {border_width = 0, padding = 12, shape = cal_shape, padding = 25},
+   style_month = {border_width = 0, padding = 12, shape = cal_shape, padding = 20},
    style_header = {border_width = 0, bg_color = "#00000000"},
    style_weekday = {border_width = 0, bg_color = "#00000000"},
    style_normal = {border_width = 0, bg_color = "#00000000"},
@@ -80,7 +80,7 @@ local month_calendar = awful.widget.calendar_popup.month({
 })
 
 -- Attach calentar to clock_widget
-month_calendar:attach(clock_widget, "tc" , { on_pressed = true, on_hover = false })
+month_calendar:attach(clock_widget, "tr" , { on_pressed = true, on_hover = false })
 
 
 -- ===================================================================
