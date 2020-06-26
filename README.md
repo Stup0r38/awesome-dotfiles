@@ -1,8 +1,8 @@
 <div align="center">
-    <h1>Awesome Dotfiles (TO UPDATE)</h1>
+    <h1>Modern Awesome (TO UPDATE)</h1>
 </div>
 
-[![HitCount](http://hits.dwyl.io/willpower3309/awesome-dotfiles.svg)](http://hits.dwyl.io/willpower3309/awesome-dotfiles)
+[![HitCount](http://hits.dwyl.com/Stup0r38/modern-awesome.svg)](http://hits.dwyl.com/Stup0r38/modern-awesome)
 
 ![](/screenshot.png)
 
@@ -34,12 +34,11 @@
 + Very few dependencies
 + Wallpaper auto-blur functionality
 + Exit screen
-+ Locking (via `i3lock`)
-+ Touch screen friendly (I primarily run this on a microsoft surface pro 6)
++ Locking (via `xscreensaver`)
 + Automatic dpi / resolution scaling
   + Note that xft.dpi must be properly assigned in the .Xresources file if you are using a high DPI screen
 + Supports multi monitor setups!
-  + The top bar appears on every monitor, and the side bar only appears on the main monitor
+  + The top bar appears on every monitor
 + i3-like keybinds
 + Very stable: Built off of the awesome 4.3 release, no bleeding edge git versions required here!
 
@@ -53,21 +52,20 @@ I have made my best effort to reduce the number of dependencies by using the awe
 |`feh`|Fast image viewer used as wallpaper setting utility|
 |`picom`|Window compositor, eliminates screen tearing and allows for cool fade effects|
 |`rofi`|Application launcher|
-|`i3lock`|Used to lock the screen|
+|`xscreensaver`|Used to lock the screen|
 |`imagemagick`|**OPTIONAL BUT NEEDED IF USING A DIFFERENT BACKGROUND**, used in config to generate blurred wallpaper|
 
 ### Optional Dependencies ###
 These will improve the user experience but aren't required:
 **Bear in mind that most of these dependencies come preinstalled on non arch systems. I would recommend reading their descriptions below to determine which ones you need to install. Alternatively, set up my config and install the packages based on what isn't appearing in the top panel.**
-+ `i3lock`: Will be opened when the lock icon is selected in the exit window
++ `xscreensaver`: Will be opened when the lock icon is selected in the exit window
 + `acpi`: Battery managing cli application, used by top bar widget to determine battery status
 + `xfce4-power-manager`: Lightweight power manager spawned when the top panel battery icon is clicked
 + `bluez`, `bluez-utils`: Bluetooth cli application, used by top bar widget to determine if bluetooth is on
 + `blueman`: Bluetooth managing application, spawns when the bluetooth top panel icon is clicked
-+ `pamac-aur`: Lightweight GUI package manager, spawned when the top panel package icon is clicked
 + `nm-connection-editor`: GUI wifi connection editor, spawned when the top panel wifi icon is clicked
-+ `Scrot`: Screenshot tool, which is mapped to the Print Screen key in keys.lua. **If you want to meet this dependency, ensure that the `~/Pictures` folder exists**, otherwise the program will save your screenshots to your home directory
-+ `Alsa`: Provides kernel driven sound drivers, which the control of has been mapped to volume keys in keys.lua
++ `gnome-screenshot`: Screenshot tool, which is mapped to the Print Screen key in keys.lua. 
++ `alsa-utils`: Provides kernel driven sound drivers, which the control of has been mapped to volume keys in keys.lua
 + `xbacklight`: Controls display brightness, which the control of has been mapped to brightness keys in keys.lua
 
 ### Fonts You Should Install ###
