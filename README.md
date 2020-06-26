@@ -61,9 +61,9 @@ These will improve the user experience but aren't required:
 + `xscreensaver`: Will be opened when the lock icon is selected in the exit window
 + `acpi`: Battery managing cli application, used by top bar widget to determine battery status
 + `xfce4-power-manager`: Lightweight power manager spawned when the top panel battery icon is clicked
-+ `bluez`, `bluez-utils`: Bluetooth cli application, used by top bar widget to determine if bluetooth is on
-+ `blueman`: Bluetooth managing application, spawns when the bluetooth top panel icon is clicked
-+ `nm-connection-editor`: GUI wifi connection editor, spawned when the top panel wifi icon is clicked
++ `bluez`: Bluetooth cli application, used by top bar widget to determine if bluetooth is on
++ `blueman`: Bluetooth managing application, spawns in the bluetooth top panel
++ `nm-connection-editor`: GUI wifi connection editor, spawns in the top panel
 + `gnome-screenshot`: Screenshot tool, which is mapped to the Print Screen key in keys.lua. 
 + `alsa-utils`: Provides kernel driven sound drivers, which the control of has been mapped to volume keys in keys.lua
 + `xbacklight`: Controls display brightness, which the control of has been mapped to brightness keys in keys.lua
