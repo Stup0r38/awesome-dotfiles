@@ -164,4 +164,4 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + [Awesome API Documentation](https://awesomewm.org/apidoc/index.html)
 + If you encounter any problems please open an issue in this repo and I will gladly investigate it
 + If you would like to change the wallpaper, ensure that the wallpaper is named "wallpaper" and is located in the `~/.config/awesome` folder. Also ensure that you delete the blurred wallpaper file in order for the blurring script to recognize it needs to generate a new blurred wallpaper
-+ This is a fork of [this project] (https://github.com/WillPower3309/awesome-dotfiles), go take a look at his work too!
++ This is a fork of [this project](https://github.com/WillPower3309/awesome-dotfiles), go take a look at his work too!
