@@ -23,7 +23,7 @@
 + **Shell**: ZSH
 + **WM**: awesome
 + **Theme**: Qogir Dark
-+ **Icons**: Tela Dark
++ **Icons**: Tela Blue
 + **Cursor**: Bibata
 + **Terminal**: Kitty
 
