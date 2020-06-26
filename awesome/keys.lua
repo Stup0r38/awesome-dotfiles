@@ -159,9 +159,9 @@ keys.globalkeys = gears.table.join(
     --launch firefox
     awful.key({ modkey }, "b",
         function ()
-            awful.spawn("firefox")
+            awful.spawn(apps.browser)
         end,
-        {description = "open firefox", group = "launcher"}
+        {description = "open browser", group = "launcher"}
     ),
     --launch file manager
     awful.key({ modkey }, "f",
@@ -346,7 +346,7 @@ keys.globalkeys = gears.table.join(
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey, "Shift" }, "Tab",
+    awful.key({ altkey, "Shift" }, "Tab",
         function ()
             awful.client.focus.byidx(-1)
         end,
