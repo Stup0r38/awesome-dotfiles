@@ -15,7 +15,7 @@ local beautiful = require("beautiful")
 
 local screen_height = awful.screen.focused().geometry.height
 local screen_width = awful.screen.focused().geometry.width
---local dpi = require('beautiful').xresources.apply_dpi
+--local dpi = beautiful.xresources.apply_dpi
 
 -- define module table
 local rules = {}
