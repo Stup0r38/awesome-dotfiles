@@ -42,7 +42,7 @@ theme.fg_minimize   = "#ffffff"
 
 -- Sizing
 theme.useless_gap         = dpi(6)            -- window gap distance
-theme.gap_single_client   = false              -- gaps if only one window is open?
+theme.gap_single_client   = false              -- gaps if only one window is open
 
 -- Window Borders
 theme.border_width          = dpi(0)            -- window border width
@@ -89,7 +89,7 @@ theme.layout_tile = "~/.config/awesome/icons/layouts/view-quilt.png"
 theme.layout_floating = "~/.config/awesome/icons/layouts/view-float.png"
 theme.layout_max = "~/.config/awesome/icons/layouts/arrow-expand-all.png"
 
-theme.icon_theme = "Marwaita"
+theme.icon_theme = "Tela-blue"
 
 -- return theme
 return theme
