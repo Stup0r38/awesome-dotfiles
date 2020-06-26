@@ -69,8 +69,8 @@ These will improve the user experience but aren't required:
 + `xbacklight`: Controls display brightness, which the control of has been mapped to brightness keys in keys.lua
 
 ### Fonts You Should Install ###
-+ `SF Text`: System font used by macOS, iOS, and watchOS. Used in this config as the WM font. Also used as font for firefox
-+ [`MesloLGS`](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf): Terminal font, customized to work flawlessly with the zsh theme used, mentioned in the [application theming](#appTheming) section of the readme.
++ `Overpass`: System font
++ `Fira Code`: Terminal font.
 
 <a name="installation"></a>
 ## Installation ##
@@ -82,7 +82,7 @@ These will improve the user experience but aren't required:
 
 <a name="folderStructure"></a>
 ## Awesome Folder File Structure ##
-In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it has been split into multiple files / folders. I have taken extra care to create a logical directory structure that will hopefully allow those new to awesomewm to have an easy time navigating it.
+In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it has been split into multiple files / folders:
 + `rc.lua`: Contains the script that runs when awesome starts (essentially links all the other files together)
 + `apps.lua`: Contains the default and startup applications
 + `keys.lua`: Contains keybinds
@@ -96,44 +96,19 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 
 <a name="applications"></a>
 ## My Preferred Applications ##
-+ **Display Manager - SDDM (with sddm-sugar-dark theme)**: Beautiful display manager. Matches the window manager theme very well and looks amazing
-+ **Text Editor - doom emacs and nvim: I'm an alpha chad
-+ **File Manager - Nautilus**: Lightweight file browser, few dependencies, and can be configured to work with a preferred terminal. Also has extensions for easy right click extraction / compression of archive files (ie zip / rar etc)
++ **Text Editor - Micro:** It's just cool and easy to use
++ **File Manager - Pcmanfm**: Probably the most lightweight gui file browser and it has very few dependencies
++ **Archive Manager - file-roller**: It just works
 + **Web Browser - Firefox**: Super configurable and isn't made by Google
-+ **Terminal - Alacritty**: A FREAKIN GPU ACCELERATED TERMINAL. So OP I love it
++ **Terminal - Alacritty**: Fast, lightweight and very configurable terminal
 + **Theme / Look & Feel Manager - lxappearance**: makes managing icon / cursor / application themes easy, only theme manager with no DE dependencies, and works very well
 
 ### Other cool applications you should install ###
 + `redshift`: Changed screen warmth based on the time of day
 + `neofetch`: Displays system information in the terminal
-+ `cmatrix`: Terminal base matrix text effect
-+ `cava`: Terminal audio visualizer!
 
 <a name="appTheming"></a>
 ## Application Theming ##
-### Firefox ###
-1. Set up [my custom Firefox theme](https://github.com/willpower3309/MinimalistMaterialFox)
-2. Use [this](https://github.com/Jaredk3nt/homepage) homepage
-3. Use `SF Text` font
-
-### Spotify ###
-1. [Install `Spicetify`](https://github.com/khanhas/spicetify-cli)
-2. chown spotify directory: `sudo chown $USER -R /opt/spotify`
-3. run `spicetify` once to generate config
-4. `spicetify backup apply enable-devtool` to enable devtools
-5. Copy my spicetify folder to `~/.config`
-6. run `spicetify update restart`
-
-### Neovim ###
-1. Ensure the nvim folder from the repo has been copied into the `~/.config` directory
-2. Install VimPlug with
-```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-3. Open neovim and run `:PlugInstall`
-4. Exit and reopen neovim
-
 ### Zsh ###
 1. Install oh-my-zsh
 ```
@@ -167,8 +142,9 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 
 ### Keyboard ###
 + `mod + enter`: Spawn terminal
++ `mod + s`: Show help menu
 + `mod + d`: Spawn rofi (an application menu)
-+ `mod + f`: Make client fullscreen
++ `mod + F11`: Make client fullscreen
 + `mod + m`: Maximize client
 + `mod + n`: Minimize client
 + `mod + shift + n`: Unminimize client
