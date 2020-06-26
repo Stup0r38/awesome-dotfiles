@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Modern Awesome (TO UPDATE)</h1>
+    <h1>Modern Awesome</h1>
 </div>
 
 [![HitCount](http://hits.dwyl.com/Stup0r38/modern-awesome.svg)](http://hits.dwyl.com/Stup0r38/modern-awesome)
@@ -38,7 +38,6 @@
 + Automatic dpi / resolution scaling
   + Note that xft.dpi must be properly assigned in the .Xresources file if you are using a high DPI screen
 + Supports multi monitor setups!
-  + The top bar appears on every monitor
 + i3-like keybinds
 + Very stable: Built off of the awesome 4.3 release, no bleeding edge git versions required here!
 
@@ -133,7 +132,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     ```
     + Edit `~/.zshrc`, add `zsh-autosuggestions` to the plugins section
-4. Fini! Reopen the terminal to view the fruit of your labor
+4. Done! Reopen the terminal to view the fruit of your labor
 
 <a name="keybinds"></a>
 ## Keybinds ##
@@ -165,3 +164,4 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + [Awesome API Documentation](https://awesomewm.org/apidoc/index.html)
 + If you encounter any problems please open an issue in this repo and I will gladly investigate it
 + If you would like to change the wallpaper, ensure that the wallpaper is named "wallpaper" and is located in the `~/.config/awesome` folder. Also ensure that you delete the blurred wallpaper file in order for the blurring script to recognize it needs to generate a new blurred wallpaper
++ This is a fork of [this project] (https://github.com/WillPower3309/awesome-dotfiles), go take a look at his work too!
