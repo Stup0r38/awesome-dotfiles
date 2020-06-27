@@ -68,7 +68,7 @@ These will improve the user experience but aren't required:
 + `xbacklight`: Controls display brightness, which the control of has been mapped to brightness keys in keys.lua
 
 ### Fonts You Should Install ###
-+ `Overpass`: System font
++ `SF Text`: System font
 + `Fira Code`: Terminal font.
 
 <a name="installation"></a>
