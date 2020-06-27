@@ -45,7 +45,7 @@ theme.useless_gap         = dpi(6)            -- window gap distance
 theme.gap_single_client   = false              -- gaps if only one window is open
 
 -- Window Borders
-theme.border_width          = dpi(0)            -- window border width
+theme.border_width          = dpi(1)            -- window border width
 theme.border_normal         = theme.bg_normal
 theme.border_focus          = "#ff8a65"
 theme.border_marked         = theme.fg_urgent
