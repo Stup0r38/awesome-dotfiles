@@ -99,7 +99,7 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 + **File Manager - Pcmanfm**: Probably the most lightweight gui file browser and it has very few dependencies
 + **Archive Manager - file-roller**: It just works
 + **Web Browser - Firefox**: Super configurable and isn't made by Google
-+ **Terminal - Alacritty**: Fast, lightweight and very configurable terminal
++ **Terminal - Kitty**: Fast, lightweight and very configurable terminal
 + **Theme / Look & Feel Manager - lxappearance**: makes managing icon / cursor / application themes easy, only theme manager with no DE dependencies, and works very well
 
 ### Other cool applications you should install ###
