@@ -20,7 +20,6 @@ local screen_width = awful.screen.focused().geometry.width
 -- define module table
 local rules = {}
 
-
 -- ===================================================================
 -- Rules
 -- ===================================================================
@@ -40,7 +39,6 @@ function rules.create(clientkeys, clientbuttons)
             buttons = clientbuttons,
             screen = awful.screen.preferred,
             placement = awful.placement.centered
-
          },
       },
         -- Floating clients.
@@ -71,19 +69,9 @@ function rules.create(clientkeys, clientbuttons)
       {
          rule_any = {
             class = {
-               "Terraria.bin.x86",
+               "flatpak run ch.openboard.OpenBoard",
             },
          }, properties = {fullscreen = true}
-      },
-
-      -- "Switch to tag"
-      -- These clients make you switch to their tag when they appear
-      {
-         rule_any = {
-            class = {
-               "Firefox"
-            },
-         }, properties = {switchtotag = true}
       },
 
       -- Visualizer
