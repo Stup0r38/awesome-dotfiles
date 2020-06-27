@@ -23,8 +23,8 @@ local theme = {}
 
 
 -- Font
-theme.font          = "SF Pro Text 9"
-theme.title_font    = "SF Pro Display Medium 10"
+theme.font          = "SF Pro Text 10"
+theme.title_font    = "SF Pro Display Medium 11"
 
 -- Background
 theme.bg_normal     = "#283039"
@@ -45,9 +45,9 @@ theme.useless_gap         = dpi(6)            -- window gap distance
 theme.gap_single_client   = false              -- gaps if only one window is open
 
 -- Window Borders
-theme.border_width          = dpi(1)            -- window border width
+theme.border_width          = dpi(2)            -- window border width
 theme.border_normal         = theme.bg_normal
-theme.border_focus          = "#ff8a65"
+theme.border_focus          = "#ffffff"
 theme.border_marked         = theme.fg_urgent
 
 -- Titlebars
@@ -78,6 +78,11 @@ theme.notification_max_width = dpi(350)
 
 --panel sizing
 theme.top_panel_height = dpi(26)
+
+--added border for active window
+client.connect_signal("focus", function(c) c.border_color = theme.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = theme.border_normal end)
+
 
 -- ===================================================================
 -- Icons
