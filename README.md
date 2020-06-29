@@ -34,6 +34,7 @@
 + Very few dependencies
 + Wallpaper auto-blur functionality
 + Exit screen
++ Borders around active window
 + Locking (via `xscreensaver`)
 + Automatic dpi / resolution scaling
   + Note that xft.dpi must be properly assigned in the .Xresources file if you are using a high DPI screen

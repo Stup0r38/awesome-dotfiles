@@ -47,7 +47,7 @@ theme.gap_single_client   = false              -- gaps if only one window is ope
 -- Window Borders
 theme.border_width          = dpi(2)            -- window border width
 theme.border_normal         = theme.bg_normal
-theme.border_focus          = "#ffffff"
+theme.border_focus          = "#d7cfc6"
 theme.border_marked         = theme.fg_urgent
 
 -- Titlebars
