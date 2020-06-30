@@ -40,7 +40,6 @@ require("components.exit-screen")
 require("components.volume-adjust")
 
 --kill application before startup
-awful.spawn.with_shell("killall volumeicon")
 awful.spawn.with_shell("killall nm-applet")
 awful.spawn.with_shell("killall blueman-applet")
 
@@ -110,9 +109,7 @@ collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
 --autostart applications
-awful.spawn.with_shell("xscreensaver")
 awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("xfce4-power-manager --restart")
-awful.spawn.with_shell("./XScreensaverStopper.sh")
 awful.spawn.with_shell("numlockx")

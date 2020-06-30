@@ -26,7 +26,7 @@ local apps = {}
 apps.default = {
     terminal = "kitty",
     launcher = "rofi -modi drun -show drun",
-    lock = "xscreensaver-command -lock",
+    lock = "xsecurelock",
     screenshot = "gnome-screenshot",
     filebrowser = "pcmanfm",
     browser = "firefox",
@@ -34,7 +34,6 @@ apps.default = {
 }
 
 -- List of apps to start once on start-up
---VEDI SE AGGIUNGERE QUI VOLUMEICON E XFCE POWER MANAGER
 local run_on_start_up = {
     "picom",
     "redshift",
