@@ -64,7 +64,6 @@ awful.layout.layouts = {
 -- Set up each screen
 local top_panel = require("components.top-panel")
 
---beautiful.useless_gap = dpi(6)
 
 awful.screen.connect_for_each_screen(function (s)
     for i, tag in pairs(tags) do
@@ -108,7 +107,6 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
---beautiful.useless_gap = dpi(6)
 
 -- ===================================================================
 -- Garbage collection (allows for lower memory consumption)
