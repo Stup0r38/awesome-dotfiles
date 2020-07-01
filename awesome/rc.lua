@@ -15,7 +15,9 @@ local gears = require("gears")
 local awful = require("awful")
 
 -- Import theme
+local xresources = require("beautiful.xresources")
 local beautiful = require("beautiful")
+local dpi = xresources.apply_dpi
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
 -- Import Keybinds
@@ -62,6 +64,7 @@ awful.layout.layouts = {
 -- Set up each screen
 local top_panel = require("components.top-panel")
 
+--beautiful.useless_gap = dpi(6)
 
 awful.screen.connect_for_each_screen(function (s)
     for i, tag in pairs(tags) do
@@ -76,6 +79,12 @@ awful.screen.connect_for_each_screen(function (s)
     
 	-- Add the top panel to the screen
     top_panel.create(s)
+    s.padding = {
+        left = dpi(-3),
+        right = dpi(-3),
+        top = dpi(-3),
+        bottom = dpi(-3)
+    }
 end)
 
 -- Signal function to execute when a new client appears.
@@ -99,6 +108,7 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
+--beautiful.useless_gap = dpi(6)
 
 -- ===================================================================
 -- Garbage collection (allows for lower memory consumption)
