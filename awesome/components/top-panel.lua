@@ -66,7 +66,7 @@ top_panel.create = function(s)
          wibox.layout.margin(wibox.widget.systray(), 0, 0, 3, 3),
          require('widgets.battery'),
          require("widgets.layout-box"),
-         separator1,
+         vseparator,
          require("widgets.calendar")
       }
    }
