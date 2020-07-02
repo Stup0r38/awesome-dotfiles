@@ -22,7 +22,7 @@
 + **OS**: Fedora 32
 + **Shell**: ZSH
 + **WM**: awesome
-+ **Theme**: Qogir Dark
++ **Theme**: Flat-Remix-GTK-Blue-Dark-Solid
 + **Icons**: Tela Blue
 + **Cursor**: Bibata
 + **Terminal**: Kitty
