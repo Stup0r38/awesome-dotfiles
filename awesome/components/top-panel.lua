@@ -45,6 +45,7 @@ wibox.widget {
 
 top_panel.create = function(s)
    local panel = awful.wibar({
+--      bg = "000000",
       screen = s,
       position = "top",
       height = beautiful.top_panel_height,

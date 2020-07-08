@@ -78,6 +78,8 @@ awful.screen.connect_for_each_screen(function (s)
     
 	-- Add the top panel to the screen
     top_panel.create(s)
+
+    --decrease useless gap size near the borders of the screen
     s.padding = {
         left = dpi(-3),
         right = dpi(-3),
