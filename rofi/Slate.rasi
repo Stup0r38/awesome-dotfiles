@@ -5,6 +5,11 @@
   spacing: 0;
 }
 
+window {
+	background-color: #d7cfc6;
+	padding: 2;
+}
+
 inputbar {
   border: 0 0 1px 0;
   children: [prompt,entry];
