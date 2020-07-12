@@ -83,7 +83,7 @@ awful.screen.connect_for_each_screen(function (s)
     s.padding = {
         left = dpi(-3),
         right = dpi(-3),
-        top = dpi(-3),
+        top = dpi(-6),
         bottom = dpi(-3)
     }
 end)

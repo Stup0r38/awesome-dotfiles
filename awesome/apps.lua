@@ -24,7 +24,7 @@ local apps = {}
 
 
 apps.default = {
-    terminal = "kitty",
+    terminal = "kitty --single-instance",
     launcher = "rofi -modi drun -show drun",
     lock = "xsecurelock",
     screenshot = "gnome-screenshot",

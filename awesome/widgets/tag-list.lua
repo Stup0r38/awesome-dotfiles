@@ -123,7 +123,7 @@ end
 tag_list.create = function(s)
    return awful.widget.taglist(
       s,
-      awful.widget.taglist.filter.all,
+      awful.widget.taglist.filter.noempty,
       awful.util.table.join(
          awful.button({}, 1,
             function(t)

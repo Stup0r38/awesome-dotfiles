@@ -178,7 +178,7 @@ keys.globalkeys = gears.table.join(
     -- Brightness
     awful.key({}, "XF86MonBrightnessUp",
         function()
-            awful.spawn("xbacklight -inc 10", false)
+            awful.spawn("xbacklight -inc 5", false)
             if toggleBriOSD ~= nil then
                 toggleBriOSD(true)
             end
@@ -186,11 +186,11 @@ keys.globalkeys = gears.table.join(
                 UpdateBriOSD()
             end
         end,
-        {description = "+10%", group = "hotkeys"}
+        {description = "+5%", group = "hotkeys"}
     ),
     awful.key({}, "XF86MonBrightnessDown",
         function()
-            awful.spawn("xbacklight -dec 10", false)
+            awful.spawn("xbacklight -dec 5", false)
             if toggleBriOSD ~= nil then
                 toggleBriOSD(true)
             end
@@ -198,7 +198,7 @@ keys.globalkeys = gears.table.join(
                 UpdateBriOSD()
             end
         end,
-        {description = "-10%", group = "hotkeys"}
+        {description = "-5%", group = "hotkeys"}
     ),
 
           -- ALSA volume control

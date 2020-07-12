@@ -12,6 +12,7 @@
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
+local gears = require("gears")
 local dpi = xresources.apply_dpi
 
 local theme = {}
@@ -42,7 +43,7 @@ theme.fg_minimize   = "#ffffff"
 
 -- Sizing
 theme.useless_gap         = dpi(6)            -- window gap distance
-theme.gap_single_client   = false              -- gaps if only one window is open
+theme.gap_single_client   = true             -- gaps if only one window is open
 
 -- Window Borders
 theme.border_width          = dpi(2)            -- window border width
@@ -56,21 +57,25 @@ theme.titlebar_bg = theme.bg_normal
 theme.titlebar_bg_focus = theme.titlebar_bg -- make titlebars not change color when focused
 
 -- Taglist
-theme.taglist_bg_empty = theme.bg_normal
-theme.taglist_bg_occupied = '#808080'
+theme.taglist_bg_empty = "#28303990"
+theme.taglist_bg_occupied = '#808080cc'
 theme.taglist_bg_urgent = '#e91e6399'
-theme.taglist_bg_focus = theme.bg_focus
+theme.taglist_bg_focus = theme.bg_normal
+theme.taglist_shape = gears.shape.rounded_bar
 
 -- Tasklist
 theme.tasklist_font = theme.font
 
-theme.tasklist_bg_normal = theme.bg_normal
-theme.tasklist_bg_focus = theme.bg_focus
+theme.tasklist_bg_normal = "#28303990"
+theme.tasklist_bg_focus = theme.bg_normal
 theme.tasklist_bg_urgent = theme.bg_urgent
+theme.tasklist_bg_minimize = "#808080cc"
 
 theme.tasklist_fg_focus = theme.fg_focus
 theme.tasklist_fg_urgent = theme.fg_urgent
 theme.tasklist_fg_normal = theme.fg_normal
+theme.tasklist_shape = gears.shape.rounded_bar
+
 
 -- Notification Sizing
 theme.notification_max_width = dpi(350)
