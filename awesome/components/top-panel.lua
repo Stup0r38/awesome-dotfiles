@@ -15,7 +15,6 @@ local beautiful = require("beautiful")
 local wibox = require("wibox")
 local gears = require("gears")
 local dpi = beautiful.xresources.apply_dpi
-local screen = awful.screen.focused()
 
 
 -- import widgets
@@ -65,7 +64,6 @@ top_panel.create = function(s)
       },
          separator,
       {
-      	
          layout = wibox.layout.fixed.horizontal,
          {
                	wibox.layout.margin(wibox.widget.systray(true), 4, 4, 3, 3),
@@ -100,7 +98,6 @@ top_panel.create = function(s)
          vseparator,
 
       }
-      
    }
 
 end
