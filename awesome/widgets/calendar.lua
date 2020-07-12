@@ -42,7 +42,7 @@ awful.tooltip({
 
 --rotondità degli spigoli del calendario
 local cal_shape = function(cr, width, height)
-   gears.shape.partially_rounded_rect(cr, width, height, true, false, true, true, 25)
+   gears.shape.partially_rounded_rect(cr, width, height, true, true, true, true, 25)
 end
 
 -- Calendar Widget

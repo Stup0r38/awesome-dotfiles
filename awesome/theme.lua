@@ -82,7 +82,7 @@ theme.notification_max_width = dpi(350)
 
 
 --panel sizing
-theme.top_panel_height = dpi(27)
+theme.top_panel_height = dpi(28)
 
 --added border for active window
 client.connect_signal("focus", function(c) c.border_color = theme.border_focus end)
