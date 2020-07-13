@@ -81,10 +81,10 @@ awful.screen.connect_for_each_screen(function (s)
 
     --decrease useless gap size near the borders of the screen
     s.padding = {
-        left = dpi(-3),
-        right = dpi(-3),
-        top = dpi(-6),
-        bottom = dpi(-3)
+        left = dpi(-2),
+        right = dpi(-2),
+        top = dpi(-1),
+        bottom = dpi(-2)
     }
 end)
 

@@ -91,7 +91,6 @@ top_panel.create = function(s)
                	calendar,
                	shape = gears.shape.rounded_bar,
                	bg = "#283039",
-               	forced_width = dpi(62), 
                	shape_clip = true,
                	widget = wibox.container.background
          },
@@ -99,7 +98,6 @@ top_panel.create = function(s)
 
       }
    }
-
 end
 
 return top_panel
