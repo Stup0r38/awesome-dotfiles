@@ -25,7 +25,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 -- Clock / Calendar 12h format
 -- Get Time/Date format using `man strftime`
-local clock_widget = wibox.widget.textclock("<span font='" .. beautiful.title_font .."'>%l:%M %p</span>", 1)
+local clock_widget = wibox.widget.textclock("<span font='" .. beautiful.title_font .."'> %l:%M %p  </span>", 1)
 
 -- Alternative to naughty.notify - tooltip. You can compare both and choose the preferred one
 awful.tooltip({
