@@ -66,7 +66,7 @@ top_panel.create = function(s)
       {
          layout = wibox.layout.fixed.horizontal,
          {
-               	wibox.layout.margin(wibox.widget.systray(true), 4, 4, 3, 3),
+               	wibox.layout.margin(wibox.widget.systray(true), 5, 5, 3, 3),
               	shape = gears.shape.rounded_bar,
                	bg = "#283039",
               	widget = wibox.container.background
