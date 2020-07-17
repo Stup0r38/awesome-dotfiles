@@ -265,7 +265,7 @@ keys.globalkeys = gears.table.join(
           -- emit signal to show the exit screen
           awesome.emit_signal("show_exit_screen")
        end,
-       {description = "toggle exit screen", group = "awesome"}
+       {description = "toggle exit screen", group = "hotkeys"}
     ),
 
     awful.key({}, "XF86PowerOff",
@@ -273,7 +273,7 @@ keys.globalkeys = gears.table.join(
           -- emit signal to show the exit screen
           awesome.emit_signal("show_exit_screen")
        end,
-       {description = "toggle exit screen", group = "awesome"}
+       {description = "toggle exit screen", group = "hotkeys"}
     ),
     
     -- =========================================
