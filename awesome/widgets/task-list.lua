@@ -205,7 +205,7 @@ task_list.create = function(s)
       tasklist_buttons,
       {},
       list_update,
-      wibox.layout.fixed.horizontal()
+      wibox.layout.flex.horizontal()
    )
 end
 

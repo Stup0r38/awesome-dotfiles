@@ -15,6 +15,7 @@ local beautiful = require("beautiful")
 local wibox = require("wibox")
 local gears = require("gears")
 local dpi = beautiful.xresources.apply_dpi
+local screen = awful.screen.focused()
 
 
 -- import widgets
@@ -34,6 +35,7 @@ wibox.widget {
     separator = wibox.widget.separator
 }
 
+local taskbarWidth = screen.geometry.width / 25 * 17
 
 -- ===================================================================
 -- Bar Creation
@@ -60,11 +62,12 @@ top_panel.create = function(s)
          vseparator,
          tag_list.create(s),
          vseparator,
-         task_list.create(s),
+         wibox.container.constraint (task_list.create(s), 'max', taskbarWidth, dpi(28)),
       },
          separator,
       {
          layout = wibox.layout.fixed.horizontal,
+         vseparator,
          {
                	wibox.layout.margin(wibox.widget.systray(true), 5, 5, 3, 3),
               	shape = gears.shape.rounded_bar,
