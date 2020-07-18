@@ -67,7 +67,6 @@ top_panel.create = function(s)
          separator,
       {
          layout = wibox.layout.fixed.horizontal,
-         vseparator,
          {
                	wibox.layout.margin(wibox.widget.systray(true), 5, 5, 3, 3),
               	shape = gears.shape.rounded_bar,
