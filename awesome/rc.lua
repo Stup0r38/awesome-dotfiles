@@ -132,7 +132,7 @@ collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
 --autostart applications
-awful.spawn.with_shell("blueman-applet")
-awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("xfce4-power-manager --restart")
+awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("numlockx")
