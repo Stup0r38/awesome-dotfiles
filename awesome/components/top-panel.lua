@@ -77,7 +77,6 @@ top_panel.create = function(s)
          {
                	battery,
                	shape = gears.shape.rounded_bar,
-               	shape_border_width = 1000,
               	bg = "#283039",
                	widget = wibox.container.background
          },
