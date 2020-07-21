@@ -41,9 +41,6 @@ require("components.wallpaper")
 require("components.exit-screen")
 require("components.volume-adjust")
 
---kill application before startup
-awful.spawn.with_shell("killall nm-applet")
-awful.spawn.with_shell("killall blueman-applet")
 
 -- Autostart specified apps
 local apps = require("apps")
@@ -131,8 +128,3 @@ end)
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 
---autostart applications
-awful.spawn.with_shell("xfce4-power-manager --restart")
-awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("blueman-applet")
-awful.spawn.with_shell("numlockx")

@@ -68,6 +68,9 @@ function rules.create(clientkeys, clientbuttons)
       -- Fullscreen clients
       {
          rule_any = {
+         	instance = {
+         	   "gnome-screenshot",
+         	},
             class = {
                "flatpak run ch.openboard.OpenBoard",
             },

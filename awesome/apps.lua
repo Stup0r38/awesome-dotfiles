@@ -37,7 +37,11 @@ apps.default = {
 local run_on_start_up = {
     "picom",
     "redshift",
-    "unclutter"
+    "unclutter",
+    "blueman-applet",
+    "nm-applet",
+    "xfce4-power-manager --restart",
+    "numlockx"
 }
 
 
