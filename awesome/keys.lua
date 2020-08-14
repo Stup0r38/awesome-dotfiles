@@ -142,13 +142,7 @@ keys.globalkeys = gears.table.join(
 
     awful.key({ modkey }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    -- Spawn terminal           
-     awful.key({ modkey }, "t",
-            function ()
-                awful.spawn("tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t")
-            end,
-            {description = "open a terminal", group = "launcher"}
-        ),   
+    -- Spawn terminal             
     awful.key({ modkey }, "Return",
         function ()
             awful.spawn(apps.terminal)
