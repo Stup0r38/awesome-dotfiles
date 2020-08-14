@@ -25,7 +25,7 @@
 + **Theme**: Flat-Remix-GTK-Blue-Dark-Solid
 + **Icons**: Tela Blue
 + **Cursor**: Bibata
-+ **Terminal**: Kitty
++ **Terminal**: St
 
 <a name="features"></a>
 ## Features ##
@@ -35,6 +35,7 @@
 + Wallpaper auto-blur functionality
 + Exit screen
 + Borders around active window
++ Taglist shows only active workspace and not empty ones
 + Locking (via `xsecurelock`)
 + Automatic dpi / resolution scaling
   + Note that xft.dpi must be properly assigned in the .Xresources file if you are using a high DPI screen
@@ -58,6 +59,7 @@ I have made my best effort to reduce the number of dependencies by using the awe
 ### Optional Dependencies ###
 These will improve the user experience but aren't required:
 **Bear in mind that most of these dependencies come preinstalled on non arch systems. I would recommend reading their descriptions below to determine which ones you need to install. Alternatively, set up my config and install the packages based on what isn't appearing in the top panel.**
++ `tmux`: Used with st fixes all his problems while having a minimal terminal
 + `acpi`: Battery managing cli application, used by top bar widget to determine battery status
 + `xfce4-power-manager`: Lightweight power manager spawned when the top panel battery icon is clicked
 + `bluez`: Bluetooth cli application, used by top bar widget to determine if bluetooth is on
@@ -69,12 +71,12 @@ These will improve the user experience but aren't required:
 
 ### Fonts You Should Install ###
 + `SF Text`: System font
-+ `Fira Code`: Terminal font.
++ `Inconsolata`: Terminal font.
 
 <a name="installation"></a>
 ## Installation ##
 1. Ensure all [dependencies](#dependencies) are met
-2. Clone this repository and place its contents into your `.config` folder
+2. Clone this repository and place its contents into your `.config` folder (except st)
 3. navigate to the `awesome/wallpaper` folder and place your desired wallpaper there, ensuring that it is named `wallpaper`. One  awesome (pun intended) feature of my config is that the filetype of the wallpaper can be any image filetype and it will automatically recognize it. Remember to delete the `blurredWallpaper` file in order to make the blurring script recognize a new wallpaper has been added and needs to be blurred 
 4. edit the `apps.lua` file to define your desired default and startup applications
 5. optional: edit the `keys.lua` file to change / add keybinds
@@ -97,10 +99,11 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 ## My Preferred Applications ##
 + **Text Editor - Micro:** It's just cool and easy to use
 + **File Manager - Pcmanfm**: Probably the most lightweight gui file browser and it has very few dependencies
-+ **Archive Manager - file-roller**: It just works
++ **Archive Manager - File-roller**: It just works
 + **Web Browser - Firefox**: Super configurable and isn't made by Google
-+ **Terminal - Kitty**: Fast, lightweight and very configurable terminal
++ **Terminal - St**: Fastest terminal so far
 + **Theme / Look & Feel Manager - lxappearance**: makes managing icon / cursor / application themes easy, only theme manager with no DE dependencies, and works very well
++ **Task Manager - Lxtask**: Very few dependences and super lightweight
 
 ### Other cool applications you should install ###
 + `redshift`: Changed screen warmth based on the time of day
@@ -114,7 +117,6 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 2. Change the zsh theme to powerlevel10k
-  + Download [this font](https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf), and move it into your `/usr/share/fonts` directory
   + Install powerlevel10k with the command below:
   ```
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -134,6 +136,25 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
     + Edit `~/.zshrc`, add `zsh-autosuggestions` to the plugins section
 4. Done! Reopen the terminal to view the fruit of your labor
 
+### St ###
+1. Copy the st folder somewhere
+
+2. Enter the folder directory
+```
+cd st
+```
+3. Install st
+```
+sudo make clean install
+```
+4. Add this lines to your .zshrc (add only if you use tmux just for this purpose, the first command kills all closed tmux sessions)
+```
+tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t
+tmux
+clear
+```
+5. Done, enjoy!
+
 <a name="keybinds"></a>
 ## Keybinds ##
 **Note that the modkey is set to be the windows / command key. If you would like to use a different modkey check out the `keys.lua` file.**
@@ -151,7 +172,6 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 + `mod + shift + [1-9]`: Move client to tag [1-9]
 + `mod + space`: Change the tag layout, alternating between tiled, floating, and maximized
 + `mod + [up / down / left / right / h / j / k / l]`: Change client by direction
-+ `mod + Shift + [up / down / left / right / h / j / k / l]`: Move client by direction
 + `mod + Control + [up / down / left / right / h / j / k / l]`: Resize client by direction
 + `mod + Escape`: Show exit screen
 

@@ -41,7 +41,6 @@ require("components.wallpaper")
 require("components.exit-screen")
 require("components.volume-adjust")
 
-
 -- Autostart specified apps
 local apps = require("apps")
 apps.autostart()
