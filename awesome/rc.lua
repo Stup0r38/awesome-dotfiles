@@ -79,7 +79,7 @@ awful.screen.connect_for_each_screen(function (s)
     s.padding = {
         left = dpi(-2),
         right = dpi(-2),
-        top = dpi(-1),
+        top = dpi(-10),
         bottom = dpi(-2)
     }
 end)
@@ -118,6 +118,7 @@ screen.connect_signal("arrange", function (s)
         end
     end
 end)
+
 
 -- ===================================================================
 -- Garbage collection (allows for lower memory consumption)

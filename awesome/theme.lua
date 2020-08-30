@@ -43,7 +43,7 @@ theme.fg_minimize   = "#ffffff"
 
 -- Sizing
 theme.useless_gap         = dpi(6)            -- window gap distance
-theme.gap_single_client   = false             -- gaps if only one window is open
+theme.gap_single_client   = true             -- gaps if only one window is open
 
 -- Window Borders
 theme.border_width          = dpi(2)            -- window border width
