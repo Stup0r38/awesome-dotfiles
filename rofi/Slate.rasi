@@ -1,12 +1,12 @@
 * {
-  background-color: #283039;
+  background-color: #161821;
   border-color: #232732;
   text-color: #8ca0aa;
   spacing: 0;
 }
 
 window {
-	background-color: #d7cfc6;
+	background-color: #e9e7de;
 	padding: 2;
 }
 

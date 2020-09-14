@@ -22,10 +22,10 @@
 + **OS**: Fedora 32
 + **Shell**: ZSH
 + **WM**: awesome
-+ **Theme**: Flat-Remix-GTK-Blue-Dark-Solid
++ **Theme**: oomox-iceb
 + **Icons**: Tela Blue
 + **Cursor**: Bibata
-+ **Terminal**: St
++ **Terminal**: Alacritty
 
 <a name="features"></a>
 ## Features ##
@@ -59,7 +59,6 @@ I have made my best effort to reduce the number of dependencies by using the awe
 ### Optional Dependencies ###
 These will improve the user experience but aren't required:
 **Bear in mind that most of these dependencies come preinstalled on non arch systems. I would recommend reading their descriptions below to determine which ones you need to install. Alternatively, set up my config and install the packages based on what isn't appearing in the top panel.**
-+ `tmux`: Used with st fixes all his problems while having a minimal terminal
 + `acpi`: Battery managing cli application, used by top bar widget to determine battery status
 + `xfce4-power-manager`: Lightweight power manager spawned when the top panel battery icon is clicked
 + `bluez`: Bluetooth cli application, used by top bar widget to determine if bluetooth is on
@@ -76,7 +75,7 @@ These will improve the user experience but aren't required:
 <a name="installation"></a>
 ## Installation ##
 1. Ensure all [dependencies](#dependencies) are met
-2. Clone this repository and place its contents into your `.config` folder (except st)
+2. Clone this repository and place its contents into your `.config` folder (except theme, it goes to .themes)
 3. navigate to the `awesome/wallpaper` folder and place your desired wallpaper there, ensuring that it is named `wallpaper`. One  awesome (pun intended) feature of my config is that the filetype of the wallpaper can be any image filetype and it will automatically recognize it. Remember to delete the `blurredWallpaper` file in order to make the blurring script recognize a new wallpaper has been added and needs to be blurred 
 4. edit the `apps.lua` file to define your desired default and startup applications
 5. optional: edit the `keys.lua` file to change / add keybinds
@@ -98,10 +97,10 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 <a name="applications"></a>
 ## My Preferred Applications ##
 + **Text Editor - Micro:** It's just cool and easy to use
-+ **File Manager - Pcmanfm**: Probably the most lightweight gui file browser and it has very few dependencies
++ **File Manager - Thunar**: One of the most lightweight gui file browser and it has very few dependencies
 + **Archive Manager - File-roller**: It just works
 + **Web Browser - Firefox**: Super configurable and isn't made by Google
-+ **Terminal - St**: Fastest terminal so far
++ **Terminal - Alacritty**: Faster than kitty and more customizable than st
 + **Theme / Look & Feel Manager - lxappearance**: makes managing icon / cursor / application themes easy, only theme manager with no DE dependencies, and works very well
 + **Task Manager - Lxtask**: Very few dependences and super lightweight
 
@@ -136,24 +135,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
     + Edit `~/.zshrc`, add `zsh-autosuggestions` to the plugins section
 4. Done! Reopen the terminal to view the fruit of your labor
 
-### St ###
-1. Copy the st folder somewhere
-
-2. Enter the folder directory
-```
-cd st
-```
-3. Install st
-```
-sudo make clean install
-```
-4. Add this lines to your .zshrc (add only if you use tmux just for this purpose, the first command kills all closed tmux sessions)
-```
-tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t
-tmux
-clear
-```
-5. Done, enjoy!
 
 <a name="keybinds"></a>
 ## Keybinds ##

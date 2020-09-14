@@ -24,11 +24,11 @@ local apps = {}
 
 
 apps.default = {
-    terminal = "st",
+    terminal = "alacritty",
     launcher = "rofi -modi drun -show drun",
     lock = "xsecurelock",
     screenshot = "gnome-screenshot",
-    filebrowser = "pcmanfm",
+    filebrowser = "thunar",
     browser = "firefox",
     editor = "micro"
 }
@@ -38,6 +38,7 @@ local run_on_start_up = {
     "picom",
     "redshift",
     "unclutter",
+    "thunar --daemon",
     "blueman-applet",
     "nm-applet",
     "xfce4-power-manager --restart",
