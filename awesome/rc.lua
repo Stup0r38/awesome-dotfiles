@@ -124,8 +124,6 @@ end)
 -- Garbage collection (allows for lower memory consumption)
 -- ===================================================================
 
---prova e vedi come funziona
-awful.screen.set_auto_dpi_enabled( true )
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 

@@ -24,7 +24,7 @@ local theme = {}
 
 
 -- Font
-theme.font          = "SF Pro Text 10.2"
+theme.font          = "SF Pro Text 11"
 theme.title_font    = "SF Pro Display Medium 11"
 
 -- Background

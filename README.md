@@ -69,7 +69,7 @@ These will improve the user experience but aren't required:
 + `xbacklight`: Controls display brightness, which the control of has been mapped to brightness keys in keys.lua
 
 ### Fonts You Should Install ###
-+ `SF Text`: System font
++ `SF Pro Text`: System font
 + `Inconsolata`: Terminal font.
 
 <a name="installation"></a>
