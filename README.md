@@ -97,7 +97,7 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 <a name="applications"></a>
 ## My Preferred Applications ##
 + **Text Editor - Micro:** It's just cool and easy to use
-+ **File Manager - Thunar**: One of the most lightweight gui file browser and it has very few dependencies
++ **File Manager - Thunar**: One of the most lightweight gui file browser and it has very few dependencies (works better with `thunar-archive-plugin`)
 + **Archive Manager - File-roller**: It just works
 + **Web Browser - Firefox**: Super configurable and isn't made by Google
 + **Terminal - Alacritty**: Faster than kitty and more customizable than st
