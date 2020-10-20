@@ -36,7 +36,7 @@
 + Exit screen
 + Borders around active window
 + Taglist shows only active workspace and not empty ones
-+ Locking (via `xsecurelock`)
++ Locking (via `slock`)
 + Automatic dpi / resolution scaling
   + Note that xft.dpi must be properly assigned in the .Xresources file if you are using a high DPI screen
 + Supports multi monitor setups!
@@ -53,7 +53,7 @@ I have made my best effort to reduce the number of dependencies by using the awe
 |`feh`|Fast image viewer used as wallpaper setting utility|
 |`picom`|Window compositor, eliminates screen tearing and allows for cool fade effects|
 |`rofi`|Application launcher|
-|`xsecurelock`|Used to lock the screen|
+|`slock`|Used to lock the screen|
 |`imagemagick`|**OPTIONAL BUT NEEDED IF USING A DIFFERENT BACKGROUND**, used in config to generate blurred wallpaper|
 
 ### Optional Dependencies ###
