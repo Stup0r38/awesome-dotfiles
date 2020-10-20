@@ -26,10 +26,10 @@ local apps = {}
 apps.default = {
     terminal = "alacritty",
     launcher = "rofi -modi drun -show drun",
-    lock = "xsecurelock",
+    lock = "slock",
     screenshot = "gnome-screenshot",
     filebrowser = "thunar",
-    browser = "firefox",
+    browser = "firefox-x11",
     editor = "micro"
 }
 

@@ -64,8 +64,8 @@ function rules.create(clientkeys, clientbuttons)
             }
          }, properties = {floating = true}
       },
-
-      -- Fullscreen clients
+	
+      -- Fullscreen clients  
       {
          rule_any = {
          	instance = {

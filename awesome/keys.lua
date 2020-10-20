@@ -142,7 +142,20 @@ keys.globalkeys = gears.table.join(
 
     awful.key({ modkey }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    -- Spawn terminal             
+    -- Change layout             
+    awful.key({ modkey, "Shift" }, "q",
+        function ()
+            awful.spawn("setxkbmap -layout it")
+        end,
+        {description = "set querty", group = "layout"}
+    ),
+    awful.key({ modkey, "Shift" }, "d",
+        function ()
+            awful.spawn("setxkbmap -model pc104 -layout us -variant dvorak")
+        end,
+        {description = "set dvorak", group = "layout"}
+    ),
+    --Spawn terminal
     awful.key({ modkey }, "Return",
         function ()
             awful.spawn(apps.terminal)
