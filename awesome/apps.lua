@@ -29,7 +29,7 @@ apps.default = {
     lock = "slock",
     screenshot = "gnome-screenshot",
     filebrowser = "thunar",
-    browser = "firefox-x11",
+    browser = "firefox",
     editor = "micro"
 }
 
