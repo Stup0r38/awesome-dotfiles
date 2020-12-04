@@ -1,9 +1,0 @@
-rofi.modi: drun,window
-rofi.lines: 10
-rofi.columns: 1
-rofi.width: 45
-rofi.drun-icon-theme: Tela-blue
-rofi.show-icons: true
-rofi.sidebar-mode: false
-rofi.m: -4
-rofi.theme: Slate

@@ -1,0 +1,17 @@
+// Config
+
+configuration {
+    modi:               "drun,window,run,combi";
+    cycle:              true;
+    show-icons:         true;
+    matching:           "glob";
+    lines:              8;
+    columns:            1;
+    width:              560;
+    location:           0;
+    padding:            50;
+    font:               "IBM Plex Mono 12";
+    hide-scrollbar:     true;
+    theme:              "javacafe";
+    display-combi:		"rofi";
+}
