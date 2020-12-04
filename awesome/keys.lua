@@ -142,19 +142,6 @@ keys.globalkeys = gears.table.join(
 
     awful.key({ modkey }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    -- Change layout             
-    awful.key({ modkey, "Shift" }, "q",
-        function ()
-            awful.spawn("setxkbmap -layout it")
-        end,
-        {description = "set querty", group = "layout"}
-    ),
-    awful.key({ modkey, "Shift" }, "d",
-        function ()
-            awful.spawn("setxkbmap -model pc104 -layout us -variant dvorak")
-        end,
-        {description = "set dvorak", group = "layout"}
-    ),
     --Spawn terminal
     awful.key({ modkey }, "Return",
         function ()
@@ -191,7 +178,7 @@ keys.globalkeys = gears.table.join(
     -- Brightness
     awful.key({}, "XF86MonBrightnessUp",
         function()
-            awful.spawn("xbacklight -inc 5", false)
+            awful.spawn("xbacklight -inc 10", false)
             if toggleBriOSD ~= nil then
                 toggleBriOSD(true)
             end
@@ -199,11 +186,11 @@ keys.globalkeys = gears.table.join(
                 UpdateBriOSD()
             end
         end,
-        {description = "+5%", group = "hotkeys"}
+        {description = "+10%", group = "hotkeys"}
     ),
     awful.key({}, "XF86MonBrightnessDown",
         function()
-            awful.spawn("xbacklight -dec 5", false)
+            awful.spawn("xbacklight -dec 10", false)
             if toggleBriOSD ~= nil then
                 toggleBriOSD(true)
             end
@@ -211,7 +198,7 @@ keys.globalkeys = gears.table.join(
                 UpdateBriOSD()
             end
         end,
-        {description = "-5%", group = "hotkeys"}
+        {description = "-10%", group = "hotkeys"}
     ),
 
           -- ALSA volume control
