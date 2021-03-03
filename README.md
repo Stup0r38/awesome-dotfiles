@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Modern Awesome</h1>
+    <h1>Iceberg Awesome</h1>
 </div>
 
 [![HitCount](http://hits.dwyl.com/Stup0r38/modern-awesome.svg)](http://hits.dwyl.com/Stup0r38/modern-awesome)
