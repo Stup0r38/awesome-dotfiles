@@ -2,8 +2,6 @@
     <h1>Iceberg Awesome</h1>
 </div>
 
-[![HitCount](http://hits.dwyl.com/Stup0r38/modern-awesome.svg)](http://hits.dwyl.com/Stup0r38/modern-awesome)
-
 ![](/screenshot.png)
 
 ## Contents ##
